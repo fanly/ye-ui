@@ -1,9 +1,9 @@
 {
   "name": "ye-ui",
-  "module": "index.ts",
   "type": "module",
+  "module": "index.ts",
   "workspaces": [
-    "packages/vue"
+    "packages/components"
   ],
   "scripts": {
     "lint": "eslint .",
@@ -11,6 +11,9 @@
     "prepare": "bunx simple-git-hooks",
     "clear": "rimraf packages/**/dist",
     "build": "bunx clear && bun run --filter './packages/**' build"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.21.1",
@@ -21,8 +24,9 @@
     "lint-staged": "^15.2.7",
     "simple-git-hooks": "^2.11.1"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "simple-git-hooks": {
+    "pre-commit": "bun lint-staged",
+    "commit-msg": "bun commitlint --edit ${1}"
   },
   "lint-staged": {
     "*": "eslint --fix"
@@ -31,9 +35,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "simple-git-hooks": {
-    "pre-commit": "bun lint-staged",
-    "commit-msg": "bun commitlint --edit ${1}"
   }
 }
