@@ -19,6 +19,11 @@
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fanly/ye-ui.git",
+    "directory": "packages/components"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
