@@ -9,10 +9,32 @@
     "url": "https://github.com/fanly/ye-ui.git",
     "directory": "packages/components"
   },
+  "bugs": {
+    "url": "https://github.com/fanly/ye-ui/issues"
+  },
+  "keywords": [
+    "ui",
+    "ye",
+    "vue3",
+    "unocss",
+    "component",
+    "component library"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/components.js",
+      "require": "./dist/components.umd.cjs"
+    }
+  },
+  "main": "./dist/components.umd.cjs",
+  "module": "./dist/components.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite",
+    "dev": "bunx --bun vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview",
+    "preview": "bunx --bun vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix .",
     "format": "bun prettier . --write"
   },
