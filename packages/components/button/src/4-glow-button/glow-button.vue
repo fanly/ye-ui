@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <button class="btn-101">
   Glow Button
   <svg>
@@ -15,3 +16,21 @@
     <rect />
   </svg>
 </button>
+
+=======
+<script setup lang="ts">
+defineOptions({
+  name: 'YeGlowButton',
+})
+</script>
+
+<template>
+  <button class="btn-101">
+    <slot />
+  </button>
+</template>
+
+<style scoped>
+@import './glow-button.css';
+</style>
+>>>>>>> Stashed changes

@@ -14,9 +14,27 @@
   background-image: none;
   color: #fff;
   cursor: pointer;
+<<<<<<< Updated upstream
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+=======
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+>>>>>>> Stashed changes
   font-size: 100%;
   line-height: 1.5;
   margin: 0;
@@ -51,7 +69,11 @@
   animation: uncover 0.5s forwards;
   background: #fff;
   bottom: calc(var(--thickness) * -1);
+<<<<<<< Updated upstream
   content: "";
+=======
+  content: '';
+>>>>>>> Stashed changes
   height: var(--thickness);
   left: 0;
   pointer-events: none;

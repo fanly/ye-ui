@@ -1,15 +1,16 @@
-// import 'uno.css'
+import 'uno.css'
 import type { App } from 'vue'
-import YeButton from './button'
-// 按需引入
-export { YeButton }
+import { YeBasicButton, YeClickFillButton, YeCoverOverButton, YeGlowButton } from './button'
 
-const component = [YeButton]
+const component = [YeBasicButton, YeClickFillButton, YeCoverOverButton, YeGlowButton]
+
+// 按需引入
+export { YeBasicButton, YeClickFillButton, YeCoverOverButton, YeGlowButton }
 
 const Components = {
   install(app: App) {
     component.forEach((item) => {
-      app.component(item.name ?? item.default.name, item)
+      app.component(item.name!, item)
     })
   },
 }
