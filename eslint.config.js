@@ -12,5 +12,11 @@ export default antfu({
     'no-console': 'warn',
     'max-statements-per-line': ['error', { max: 2 }],
     'vue/one-component-per-file': 'off',
+    'vue/no-parsing-error': [
+      'error',
+      {
+        'invalid-first-character-of-tag-name': false,
+      },
+    ],
   },
 })

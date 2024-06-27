@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-<button class="btn-100">
-Button
-</button>
-
-=======
 <script setup lang="ts">
 defineOptions({
   name: 'YeCoverOverButton',
@@ -20,4 +14,3 @@ defineOptions({
 <style scoped>
 @import './cover-over.css';
 </style>
->>>>>>> Stashed changes

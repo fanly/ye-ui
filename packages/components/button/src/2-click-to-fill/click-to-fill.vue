@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-<button class="btn-10">
-<span>Button</span>
-</button>
-
-=======
 <script setup lang="ts">
 defineOptions({
   name: 'YeClickFillButton',
@@ -20,4 +14,3 @@ defineOptions({
 <style scoped>
 @import './click-to-fill.css';
 </style>
->>>>>>> Stashed changes

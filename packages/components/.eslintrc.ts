@@ -6,5 +6,11 @@ module.exports = {
   rules: {
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
+    'vue/no-parsing-error': [
+      'error',
+      {
+        'invalid-first-character-of-tag-name': false,
+      },
+    ],
   },
 }
