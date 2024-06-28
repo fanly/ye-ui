@@ -4,6 +4,9 @@
   "version": "0.0.3",
   "private": false,
   "description": "一个简单的组件库",
+  "author": "fanly <https://github.com/fanly>",
+  "license": "MIT",
+  "homepage": "https://github.com/fanly/ye-ui",
   "repository": {
     "type": "git",
     "url": "https://github.com/fanly/ye-ui.git",
@@ -36,7 +39,7 @@
   ],
   "scripts": {
     "dev": "bunx --bun vite -d",
-    "build": "vue-tsc -b && vite build -d",
+    "build": "vue-tsc -b && bun run vite build -d",
     "preview": "bunx --bun vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix .",
     "format": "bun prettier . --write"
@@ -46,6 +49,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
+    "@ye-ui/preset": "link:@ye-ui/preset",
     "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.26.0",

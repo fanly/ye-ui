@@ -9,7 +9,9 @@ import { YeTextSlideButton } from '@ye-ui/components'
     <!--    <YeClickFillButton><span>Button</span></YeClickFillButton> -->
     <!--    &lt;!&ndash;    <ye-cover-over-button>Button</ye-cover-over-button> &ndash;&gt; -->
     <!--    <YeGlowButton>Button</YeGlowButton> -->
-    <YeTextSlideButton>Button</YeTextSlideButton>
+    <YeTextSlideButton type="error">
+      Button
+    </YeTextSlideButton>
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
   </div>

@@ -11,5 +11,5 @@ defineOptions({
 </template>
 
 <style scoped>
-@import './glow-button.css';
+@import 'glow-button.css';
 </style>

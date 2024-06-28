@@ -12,5 +12,5 @@ defineOptions({
 </template>
 
 <style scoped>
-@import './basic.css';
+@import 'basic.css';
 </style>

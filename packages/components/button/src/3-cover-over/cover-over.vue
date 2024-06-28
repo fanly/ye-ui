@@ -12,5 +12,5 @@ defineOptions({
 </template>
 
 <style scoped>
-@import './cover-over.css';
+@import 'cover-over.css';
 </style>

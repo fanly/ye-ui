@@ -1,0 +1,44 @@
+{
+  "name": "@ye-ui/preset",
+  "version": "0.0.1",
+  "description": "Ye UI css rules for unocss preset.",
+  "author": "fanly <https://github.com/fanly>",
+  "license": "MIT",
+  "homepage": "https://github.com/fanly/ye-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fanly/ye-ui",
+    "directory": "packages/preset"
+  },
+  "bugs": {
+    "url": "https://github.com/fanly/ye-ui/issues"
+  },
+  "keywords": [
+    "unocss",
+    "ye-ui",
+    "unocss preset"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "tsup": "^8.1.0"
+  }
+}

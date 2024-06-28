@@ -12,5 +12,5 @@ defineOptions({
 </template>
 
 <style scoped>
-@import './click-to-fill.css';
+@import 'click-to-fill.css';
 </style>

@@ -1,6 +1,7 @@
 // uno.config.ts
-import { defineConfig } from 'unocss'
+import { defineConfig, presetUno } from 'unocss'
+import { presetUnocssUI } from '@ye-ui/preset'
 
 export default defineConfig({
-  // ...UnoCSS options
+  presets: [presetUno(), presetUnocssUI()],
 })
