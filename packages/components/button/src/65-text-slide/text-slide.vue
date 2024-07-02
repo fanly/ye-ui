@@ -17,7 +17,7 @@ withDefaults(
 </script>
 
 <template>
-  <button class="btn-66" :class="`bg-${type}-500`">
+  <button class="btn-66 font-sans" :class="`bg-${type}-500`">
     <slot />
   </button>
 </template>

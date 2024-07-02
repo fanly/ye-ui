@@ -17,7 +17,7 @@ withDefaults(
 </script>
 
 <template>
-  <button class="btn-100" :class="`bg-${type}`">
+  <button class="btn-100 font-mono" :class="`bg-${type}`">
     <!-- 定义插槽用于让用户自定义按钮你们的内容 -->
     <slot />
   </button>

@@ -48,8 +48,9 @@
     "vue": "^3.4.29"
   },
   "devDependencies": {
+    "@unocss/preset-web-fonts": "^0.61.0",
     "@vitejs/plugin-vue": "^5.0.5",
-    "@ye-ui/preset": "0.0.1",
+    "@ye-ui/preset": "link:@ye-ui/preset",
     "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.26.0",
