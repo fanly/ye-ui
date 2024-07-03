@@ -39,7 +39,7 @@
   ],
   "scripts": {
     "dev": "bunx --bun vite -d",
-    "build": "vue-tsc -b && vite build -d",
+    "build": "vue-tsc -b && bun run vite build",
     "preview": "bunx --bun vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix .",
     "format": "bun prettier . --write"

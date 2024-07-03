@@ -6,7 +6,15 @@ const levels = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '9
 const sizes = ['sm', 'md', 'lg', 'full']
 const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'sm', 'md', 'lg']
 const nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
+const themeColors = {
+  primary: colors.indigo,
+  secondary: colors.teal,
+  accent: colors.pink,
+  success: colors.green,
+  info: colors.blue,
+  warning: colors.yellow,
+  error: colors.red,
+}
 export function presetUnocssUI(): Preset {
   return {
     name: '@unocss-ui/preset',
@@ -25,15 +33,29 @@ export function presetUnocssUI(): Preset {
       ...nums.map(n => `border-t-${n}`),
     ],
     theme: {
-      colors: {
-        primary: colors.indigo,
-        secondary: colors.teal,
-        accent: colors.pink,
-        success: colors.green,
-        info: colors.blue,
-        warning: colors.yellow,
-        error: colors.red,
-      },
+      colors: themeColors,
     },
+    rules: [
+      [
+        /^text-(.*)$/,
+        ([, c], { theme }) => {
+          const color = Object.entries(themeColors).find(([key]) => key === c)?.[0]
+          if (color !== undefined && theme !== undefined)
+            return { color: color[500] }
+        },
+      ],
+      [/^button-(.*)$/, function* ([, c], { symbols }) {
+        const background = Object.entries(themeColors).find(([key]) => key === c)?.[1][500]
+        yield {
+          background,
+          color: `rgb(from ${background} calc(1 - r) calc(1 - g) calc(1 - b))`,
+        }
+        yield {
+          [symbols.selector]: selector => `${selector}:hover`,
+          // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
+          background: `hsl(from ${background} h s calc(l * 1.2))`,
+        }
+      }],
+    ],
   }
 }

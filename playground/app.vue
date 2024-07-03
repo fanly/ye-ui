@@ -8,7 +8,7 @@ import { YeBasicButton, YeTextSlideButton } from '@ye-ui/components'
     <!--    <YeBasicButton>你好</YeBasicButton> -->
     <!--    <YeClickFillButton><span>Button</span></YeClickFillButton> -->
     <!--    &lt;!&ndash;    <ye-cover-over-button>Button</ye-cover-over-button> &ndash;&gt; -->
-    <YeBasicButton type="success" class="text-error">
+    <YeBasicButton type="success">
       Button
     </YeBasicButton>
     <YeTextSlideButton type="success" class="text-error">
