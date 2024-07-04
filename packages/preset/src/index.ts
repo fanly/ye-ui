@@ -44,18 +44,6 @@ export function presetUnocssUI(): Preset {
             return { color: color[500] }
         },
       ],
-      [/^button-(.*)$/, function* ([, c], { symbols }) {
-        const background = Object.entries(themeColors).find(([key]) => key === c)?.[1][500]
-        yield {
-          background,
-          color: `rgb(from ${background} calc(1 - r) calc(1 - g) calc(1 - b))`,
-        }
-        yield {
-          [symbols.selector]: selector => `${selector}:hover`,
-          // https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
-          background: `hsl(from ${background} h s calc(l * 1.2))`,
-        }
-      }],
     ],
   }
 }

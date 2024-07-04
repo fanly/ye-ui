@@ -1,6 +1,8 @@
 // uno.config.ts
 import { defineConfig, presetUno } from 'unocss'
 import { presetUnocssUI } from '@ye-ui/preset'
+import prefixes from '@ye-ui/preset/prefixes'
+import extractor from '@ye-ui/extractor'
 import presetWebFonts from '@unocss/preset-web-fonts'
 
 export default defineConfig({
@@ -27,6 +29,11 @@ export default defineConfig({
           },
         ],
       },
+    }),
+  ],
+  extractors: [
+    extractor({
+      prefixes,
     }),
   ],
 })

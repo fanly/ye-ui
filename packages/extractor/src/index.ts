@@ -1,49 +1,55 @@
-import type { Preset } from 'unocss'
-import { colors } from 'unocss/preset-mini'
+import { defaultSplitRE } from '@unocss/core'
+import type { Extractor } from '@unocss/core'
 
-const types = ['primary', 'secondary', 'accent', 'success', 'info', 'warning', 'error']
-const levels = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
-const sizes = ['sm', 'md', 'lg', 'full']
-const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'sm', 'md', 'lg']
-const nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-const themeColors = {
-  primary: colors.indigo,
-  secondary: colors.teal,
-  accent: colors.pink,
-  success: colors.green,
-  info: colors.blue,
-  warning: colors.yellow,
-  error: colors.red,
+interface ExtractorOptions {
+  /**
+   * @default []
+   * @description List of prefixes to extract from the vue-script code.
+   */
+  prefixes?: string[]
 }
-export function presetUnocssUI(): Preset {
+
+function generateSelectors(prefix: string, values: string[]): string[] {
+  // eg convert prefix to kebab-case
+  prefix = prefix.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+
+  return values
+    .filter(v => Boolean(v) && v !== ':')
+    .map(v => `[${prefix}~="${v}"]`)
+}
+
+function splitCodeWithArbitraryVariants(code: string, prefixes: string[]): string[] {
+  const result: string[] = []
+  const camelCasePrefixes = prefixes.map(prefix => prefix.replace(/-([a-z])/g, (_, c) => c.toUpperCase()))
+
+  prefixes = [...prefixes, ...camelCasePrefixes]
+
+  for (const prefix of prefixes) {
+    const regex = new RegExp(`^\\s*${prefix}:\\s+'.*',?\\s*$`, 'gm')
+    const matches = code.match(regex)
+
+    if (!matches)
+      continue
+
+    for (const match of matches) {
+      const values = match.replace(/^.*:\s*'(.*)',?\s*$/, '$1').split(defaultSplitRE)
+      const selectors = generateSelectors(prefix, values)
+
+      result.push(...selectors)
+    }
+  }
+
+  return result
+}
+
+function extractor(options?: ExtractorOptions): Extractor {
   return {
-    name: '@unocss-ui/preset',
-    safelist: [
-      ...types.map(t => levels.map(l => `bg-${t}-${l}`)).flat(),
-      ...types.map(t => levels.map(l => `hover:bg-${t}-${l}`)).flat(),
-      ...types.map(t => levels.map(l => `border-${t}-${l}`)).flat(),
-      ...types.map(t => levels.map(l => `text-${t}-${l}`)).flat(),
-      ...types.map(t => levels.map(l => `focus:ring-${t}-${l}`)).flat(),
-      ...types.map(t => levels.map(l => `focus:border-${t}-${l}`)).flat(),
-      ...fractions.map(f => `w-${f} h-${f}`.split(' ')).flat(),
-      ...types.map(t => `border-r-${t}-500`),
-      ...sizes.map(s => `rounded-${s}`),
-      ...levels.map(l => `duration-${l}`),
-      ...nums.map(n => `border-${n}`),
-      ...nums.map(n => `border-t-${n}`),
-    ],
-    theme: {
-      colors: themeColors,
+    name: '@una-ui/extractor',
+    order: 0,
+    async extract({ code }) {
+      return splitCodeWithArbitraryVariants(code, options?.prefixes ?? [])
     },
-    rules: [
-      [
-        /^text-(.*)$/,
-        ([, c], { theme }) => {
-          const color = Object.entries(themeColors).find(([key]) => key === c)?.[0]
-          if (color !== undefined && theme !== undefined)
-            return { color: color[500] }
-        },
-      ],
-    ],
   }
 }
+
+export default extractor

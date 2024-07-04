@@ -1,14 +1,14 @@
 {
-  "name": "@ye-ui/preset",
-  "version": "0.0.2",
-  "description": "Ye UI css rules for unocss preset.",
+  "name": "@ye-ui/extractor",
+  "version": "0.0.1",
+  "description": "Ye UI css rules for unocss extractor.",
   "author": "fanly <https://github.com/fanly>",
   "license": "MIT",
   "homepage": "https://github.com/fanly/ye-ui",
   "repository": {
     "type": "git",
     "url": "https://github.com/fanly/ye-ui",
-    "directory": "packages/preset"
+    "directory": "packages/extractor"
   },
   "bugs": {
     "url": "https://github.com/fanly/ye-ui/issues"
@@ -16,7 +16,7 @@
   "keywords": [
     "unocss",
     "ye-ui",
-    "unocss preset"
+    "unocss extractor"
   ],
   "sideEffects": false,
   "exports": {
