@@ -2,22 +2,12 @@
 defineOptions({
   name: 'YeTextSlideButton',
 })
-withDefaults(
-  defineProps<{
-    type?: 'default' | 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
-    size?: 'sm' | 'md' | 'lg'
-    disabled?: boolean
-  }>(),
-  {
-    size: 'md',
-    type: 'info',
-    disabled: false,
-  },
-)
+defineProps(['type'])
 </script>
 
 <template>
-  <button class="btn-66 font-sans" :class="`bg-${type}-500`">
+  <button class="btn-66 font-sans btn-info" :class="`${type}`">
+    {{ type }}
     <slot />
   </button>
 </template>

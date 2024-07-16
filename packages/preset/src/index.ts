@@ -35,15 +35,8 @@ export function presetUnocssUI(): Preset {
     theme: {
       colors: themeColors,
     },
-    rules: [
-      [
-        /^text-(.*)$/,
-        ([, c], { theme }) => {
-          const color = Object.entries(themeColors).find(([key]) => key === c)?.[0]
-          if (color !== undefined && theme !== undefined)
-            return { color: color[500] }
-        },
-      ],
+    shortcuts: [
+      [/^btn-(\D*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100 py-2 px-4 rounded-lg`],
     ],
   }
 }

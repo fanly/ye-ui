@@ -8,10 +8,10 @@ import { YeBasicButton, YeTextSlideButton } from '@ye-ui/components'
     <!--    <YeBasicButton>你好</YeBasicButton> -->
     <!--    <YeClickFillButton><span>Button</span></YeClickFillButton> -->
     <!--    &lt;!&ndash;    <ye-cover-over-button>Button</ye-cover-over-button> &ndash;&gt; -->
-    <YeBasicButton type="success">
+    <YeBasicButton type="btn-success">
       Button
     </YeBasicButton>
-    <YeTextSlideButton type="success" class="text-error">
+    <YeTextSlideButton type="btn-primary">
       Button
     </YeTextSlideButton>
     <NuxtRouteAnnouncer />

@@ -44,7 +44,7 @@ function splitCodeWithArbitraryVariants(code: string, prefixes: string[]): strin
 
 function extractor(options?: ExtractorOptions): Extractor {
   return {
-    name: '@una-ui/extractor',
+    name: '@ye-ui/extractor',
     order: 0,
     async extract({ code }) {
       return splitCodeWithArbitraryVariants(code, options?.prefixes ?? [])
