@@ -12,7 +12,7 @@ withDefaults(
     size: 'md',
     type: 'info',
     disabled: false,
-  },
+  }
 )
 </script>
 

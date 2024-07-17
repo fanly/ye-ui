@@ -1,5 +1,7 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "types": ["vue-vine/macros"]
+  },
   "references": [
     {
       "path": "./tsconfig.app.json"
@@ -7,5 +9,6 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "files": []
 }
