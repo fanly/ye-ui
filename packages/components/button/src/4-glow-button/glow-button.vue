@@ -4,7 +4,7 @@ defineOptions({
 })
 withDefaults(
   defineProps<{
-    type?: 'default' | 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
+    type?: 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
     size?: 'sm' | 'md' | 'lg'
     disabled?: boolean
   }>(),
@@ -17,7 +17,7 @@ withDefaults(
 </script>
 
 <template>
-  <button class="btn-101 font-mono" :class="`bg-${type}`">
+  <button class="btn-101 font-mono" :class="type">
     <slot />
   </button>
 </template>

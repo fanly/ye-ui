@@ -2,13 +2,23 @@
 defineOptions({
   name: 'YeBasicButton',
 })
-defineProps(['type'])
+withDefaults(
+  defineProps<{
+    type?: 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
+    size?: 'sm' | 'md' | 'lg'
+    disabled?: boolean
+  }>(),
+  {
+    size: 'md',
+    type: 'info',
+    disabled: false,
+  },
+)
 </script>
 
 <template>
-  <button class="btn-1" :class="type">
+  <button class="btn-1 button" :class="type">
     <!-- 定义插槽用于让用户自定义按钮你们的内容 -->
-    {{ type }}
     <slot />
   </button>
 </template>

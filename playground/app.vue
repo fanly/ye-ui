@@ -5,16 +5,15 @@ import { YeBasicButton, YeTextSlideButton } from '@ye-ui/components'
 
 <template>
   <div>
-    <!--    <YeBasicButton>你好</YeBasicButton> -->
-    <!--    <YeClickFillButton><span>Button</span></YeClickFillButton> -->
-    <!--    &lt;!&ndash;    <ye-cover-over-button>Button</ye-cover-over-button> &ndash;&gt; -->
-    <YeBasicButton type="btn-success">
-      Button
+    <YeBasicButton type="button-info">
+      YeBasicButton
     </YeBasicButton>
-    <YeTextSlideButton type="btn-primary">
-      Button
+    <YeTextSlideButton type="button-accent">
+      YeTextSlideButton
     </YeTextSlideButton>
+    <button class="button button-error">
+      普通 Button
+    </button>
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
   </div>
 </template>
