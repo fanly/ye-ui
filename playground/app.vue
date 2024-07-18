@@ -5,7 +5,7 @@ import { YeBasicButton, YeTextSlideButton } from '@ye-ui/components'
 
 <template>
   <div>
-    <YeBasicButton type="button-info">
+    <YeBasicButton type="button-success">
       YeBasicButton
     </YeBasicButton>
     <YeTextSlideButton type="button-accent">
