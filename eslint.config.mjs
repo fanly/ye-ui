@@ -6,28 +6,30 @@ export default antfu( {
   // - 目前不支持 ESLint Stylistic
   stylistic: false,
   }, {
+    ignores: ['/packages/**/*.vine.ts', '/dist', '/node_modules', '/packages/**/dist', '/packages/**/node_modules'],
+    rules: {
+      '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+      '@typescript-eslint/ban-ts-comment': 'warn',
+      '@typescript-eslint/consistent-type-definitions': 'off',
+      'import/first': 'off',
+      'import/order': 'off',
+      'symbol-description': 'off',
+      'no-console': 'warn',
+      'max-statements-per-line': ['error', { max: 2 }],
+      'vue/one-component-per-file': 'off',
+      'vue/no-parsing-error': [
+        'error',
+        {
+          'invalid-first-character-of-tag-name': false,
+        },
+      ],
+    },
+  },
+  {
   files: [
     '/packages/**/*.vine.ts',
   ],
   languageOptions: {
     parser: VueVineESLintParser,
-  },
-  ignores: ['/dist', '/node_modules', '/packages/**/dist', '/packages/**/node_modules'],
-  rules: {
-    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
-    '@typescript-eslint/ban-ts-comment': 'warn',
-    '@typescript-eslint/consistent-type-definitions': 'off',
-    'import/first': 'off',
-    'import/order': 'off',
-    'symbol-description': 'off',
-    'no-console': 'warn',
-    'max-statements-per-line': ['error', { max: 2 }],
-    'vue/one-component-per-file': 'off',
-    'vue/no-parsing-error': [
-      'error',
-      {
-        'invalid-first-character-of-tag-name': false,
-      },
-    ],
   },
 })

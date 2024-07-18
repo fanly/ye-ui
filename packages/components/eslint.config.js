@@ -3,15 +3,14 @@ import * as VueVineESLintParser from '@vue-vine/eslint-parser'
 
 export default antfu(
   {
+    unocss: true,
+    vue: true,
+    typescript: true,
     // 在这里覆盖 antfu 的设置：
     // - 目前不支持 ESLint Stylistic
     stylistic: false,
   },
   {
-    files: ['./src/**/*.vine.ts', './src/**/*.vue'],
-    languageOptions: {
-      parser: VueVineESLintParser,
-    },
     ignores: ['/dist', '/node_modules', '/packages/**/dist', '/packages/**/node_modules'],
     rules: {
       '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
@@ -29,6 +28,12 @@ export default antfu(
           'invalid-first-character-of-tag-name': false,
         },
       ],
+    },
+  },
+  {
+    files: ['/packages/**/*.vine.ts'],
+    languageOptions: {
+      parser: VueVineESLintParser,
     },
   }
 )
