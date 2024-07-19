@@ -1,0 +1,53 @@
+.btn-73,
+.btn-73 *,
+.btn-73 :after,
+.btn-73 :before,
+.btn-73:after,
+.btn-73:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-73 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-image: none;
+  cursor: pointer;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn-73:disabled {
+  cursor: default;
+}
+.btn-73:-moz-focusring {
+  outline: auto;
+}
+.btn-73 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-73 [hidden] {
+  display: none;
+}
+.btn-73 {
+  border-radius: 999px;
+  box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #fff;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-shadow: 2px 2px 2px #d6e1ef99, 0 0 0 #000, 2px 2px 2px #d6e1ef00;
+  text-transform: uppercase;
+  transition: 0.1s;
+}
+.btn-73:active {
+  box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48),
+    inset -3px -3px 7px #fff;
+  color: #000;
+  text-shadow: 1px 1px 1px #d6e1ef99, 0 0 0 #000, 1px 1px 1px #d6e1ef00;
+}

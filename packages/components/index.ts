@@ -1,6 +1,6 @@
 import 'uno.css'
 import type { App } from 'vue'
-import { YeButton} from './button'
+import { YeButton } from './button'
 
 const component = [YeButton]
 
