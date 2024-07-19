@@ -8,12 +8,6 @@ import { YeButton } from '@ye-ui/components'
     <YeButton mode="basic" type="success">
       basic
     </YeButton>
-    <!--    <YeButton mode="click-fill" type="info">-->
-    <!--      YeButton-->
-    <!--    </YeButton>-->
-    <!--    <YeButton mode="cover-over" type="warning">-->
-    <!--      cover-over-->
-    <!--    </YeButton>-->
     <YeButton mode="glow" type="error">
       glow
     </YeButton>
@@ -53,9 +47,5 @@ import { YeButton } from '@ye-ui/components'
         />
       </svg>
     </YeButton>
-    <button class="button button-success">
-      普通 Button
-    </button>
-    <NuxtRouteAnnouncer />
   </div>
 </template>
