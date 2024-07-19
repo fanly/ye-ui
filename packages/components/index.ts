@@ -1,11 +1,11 @@
 import 'uno.css'
 import type { App } from 'vue'
-import { YeBasicButton, YeClickFillButton, YeCoverOverButton, YeGlowButton, YeTextSlideButton } from './button'
+import { YeButton} from './button'
 
-const component = [YeBasicButton, YeClickFillButton, YeCoverOverButton, YeGlowButton, YeTextSlideButton]
+const component = [YeButton]
 
 // 按需引入
-export { YeBasicButton, YeClickFillButton, YeCoverOverButton, YeGlowButton, YeTextSlideButton }
+export { YeButton }
 
 const Components = {
   install(app: App) {
