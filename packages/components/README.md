@@ -72,4 +72,4 @@ s-2.5,5.584-5.584,5.584C19.874,19.215,17.374,16.715,17.374,13.63z"
 
 ## License
 
-[MIT](https://github.com/fanly/ye-ui/blob/main/LICENSE) License © 2024 [Chris](https://github.com/fanly)
+[MIT](https://github.com/fanly/ye-ui/blob/main/LICENSE) License © 2024 [Fanly](https://github.com/fanly)
