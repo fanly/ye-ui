@@ -12,9 +12,6 @@
   -webkit-appearance: button;
   background-image: none;
   cursor: pointer;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 100%;
   line-height: 1.5;
   margin: 0;
@@ -36,7 +33,9 @@
 }
 .btn-72 {
   border-radius: 999px;
-  box-shadow: 5px 5px 10px #cee3f2, -5px -5px 10px #faffff;
+  box-shadow:
+    5px 5px 10px #cee3f2,
+    -5px -5px 10px #faffff;
   box-sizing: border-box;
   display: block;
   font-weight: 900;
@@ -48,5 +47,7 @@
   transition: 0.2s;
 }
 .btn-72:active {
-  box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
+  box-shadow:
+    inset 5px 5px 10px #cee3f2,
+    inset -5px -5px 10px #faffff;
 }

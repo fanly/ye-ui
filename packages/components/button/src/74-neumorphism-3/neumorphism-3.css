@@ -36,8 +36,7 @@
   box-shadow: inset 4.3px 4.3px 7px #fff;
   box-sizing: border-box;
   display: block;
-  filter: drop-shadow(3.4px 3.4px 3.4px rgb(183, 177, 181))
-    drop-shadow(-3.4px -3.4px 3.4px white);
+  filter: drop-shadow(3.4px 3.4px 3.4px rgb(183, 177, 181)) drop-shadow(-3.4px -3.4px 3.4px white);
   font-weight: 900;
   -webkit-mask-image: none;
   overflow: hidden;

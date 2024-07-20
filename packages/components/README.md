@@ -6,6 +6,7 @@
 ## Features
 
 - 🌈 **Components Design** - Ye provides neat & beautiful crafted UI components.
+
 ## Usage
 
 ### Full Import
@@ -13,11 +14,12 @@
 ```bash
 npm i @ye-ui/components
 ```
+
 Add `@ye-ui/components` in your main entry file.
 
 ```vue
 // app.vue
-<script setup lang='ts'>
+<script setup lang="ts">
 import '@ye-ui/components/style.css'
 import { YeButton } from '@ye-ui/components'
 </script>
@@ -33,19 +35,19 @@ import { YeButton } from '@ye-ui/components'
     <YeButton mode="text-slide" type="primary">
       text-slide
     </YeButton>
-  
+
     <YeButton mode="neumorphism-1" type="primary">
       neumorphism-1
     </YeButton>
-  
+
     <YeButton mode="neumorphism-2" type="primary">
       neumorphism-2
     </YeButton>
-  
+
     <YeButton mode="neumorphism-3" type="primary">
       neumorphism-3
     </YeButton>
-  
+
     <YeButton mode="neumorphism-4" type="primary">
       neumorphism-4
     </YeButton>
