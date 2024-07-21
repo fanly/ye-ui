@@ -1,12 +1,3 @@
-.btn-73,
-.btn-73 *,
-.btn-73 :after,
-.btn-73 :before,
-.btn-73:after,
-.btn-73:before {
-  border: 0 solid;
-  box-sizing: border-box;
-}
 .btn-73 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;

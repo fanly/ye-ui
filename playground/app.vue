@@ -91,5 +91,9 @@ import { YeButton } from '@ye-ui/components'
     <YeButton mode="double-diagonal" type="primary">
       double-diagonal
     </YeButton>
+
+    <button class="btn">
+      普通按钮
+    </button>
   </div>
 </template>

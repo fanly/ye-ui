@@ -7,7 +7,7 @@ export function YeMarqueeSignButton() {
   const nextText = vineProp.withDefault<string>('nextText')
 
   return vine`
-    <button class="btn-23 button font-sans" :class="type">
+    <button class="btn btn-23 font-sans" :class="type">
       <span class="text">{{ text }}</span>
       <span class="marquee" aria-hidden>{{ nextText }}</span>
     </button>
