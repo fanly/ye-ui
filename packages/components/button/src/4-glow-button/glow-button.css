@@ -10,9 +10,6 @@
   padding: 0;
   text-transform: uppercase;
 }
-.btn-101:disabled {
-  cursor: default;
-}
 .btn-101:-moz-focusring {
   outline: auto;
 }
@@ -34,7 +31,6 @@
   border: none;
   border-radius: var(--roundness);
   color: var(--color);
-  cursor: pointer;
   display: block;
   font-family: Poppins, 'sans-serif';
   font-size: 1rem;

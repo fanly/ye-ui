@@ -2,7 +2,6 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-image: none;
-  cursor: pointer;
   font-size: 100%;
   font-weight: 900;
   line-height: 1.5;
@@ -10,9 +9,6 @@
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
   text-transform: uppercase;
-}
-.btn-20:disabled {
-  cursor: default;
 }
 .btn-20:-moz-focusring {
   outline: auto;

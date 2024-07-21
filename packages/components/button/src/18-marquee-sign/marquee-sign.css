@@ -2,8 +2,6 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-image: none;
-  color: #fff;
-  cursor: pointer;
   font-size: 100%;
   font-weight: 900;
   line-height: 1.5;
@@ -11,9 +9,6 @@
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
   text-transform: uppercase;
-}
-.btn-23:disabled {
-  cursor: default;
 }
 .btn-23:-moz-focusring {
   outline: auto;
@@ -27,7 +22,6 @@
 }
 .btn-23 {
   border-radius: 99rem;
-  border-width: 2px;
   overflow: hidden;
   padding: 0.8rem 3rem;
   position: relative;

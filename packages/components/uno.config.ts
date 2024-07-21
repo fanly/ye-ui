@@ -55,7 +55,7 @@ export default defineConfig({
   },
   shortcuts: [
     {
-      'btn': 'border-0 box-border',
+      'btn': 'border-0 box-border cursor-default *:border-0 *:box-border before:border-0 before:box-border after:border-0 after:box-border disabled:cursor-default',
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
