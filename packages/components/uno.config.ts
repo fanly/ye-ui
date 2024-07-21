@@ -53,6 +53,7 @@ export default defineConfig({
       error: colors.red,
     },
   },
+  rules: [],
   shortcuts: [
     {
       'btn': 'border-0 box-border cursor-default *:border-0 *:box-border before:border-0 before:box-border after:border-0 after:box-border disabled:cursor-default',

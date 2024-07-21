@@ -56,7 +56,6 @@
   width: var(--size);
 }
 .btn-89:before {
-  background: #fff;
   border-radius: 50%;
   content: '';
   inset: 2px;
