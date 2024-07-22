@@ -2,8 +2,6 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-image: none;
-  font-size: 100%;
-  line-height: 1.5;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
@@ -23,8 +21,6 @@
   --margin: 5px;
   background: none;
   display: inline;
-  font-weight: 900;
-  padding: 1px 2px;
   position: relative;
   text-transform: uppercase;
 }

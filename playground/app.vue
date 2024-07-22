@@ -5,7 +5,7 @@ import { YeButton } from '@ye-ui/components'
 
 <template>
   <div>
-    <YeButton mode="basic" type="success">
+    <YeButton mode="basic" type="error" size="sm">
       basic
     </YeButton>
     <YeButton mode="glow" type="error">
@@ -92,7 +92,7 @@ import { YeButton } from '@ye-ui/components'
       double-diagonal
     </YeButton>
 
-    <button class="btn">
+    <button class="text-lg">
       普通按钮
     </button>
   </div>

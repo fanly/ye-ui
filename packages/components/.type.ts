@@ -1,0 +1,1 @@
+export type themeType = 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'

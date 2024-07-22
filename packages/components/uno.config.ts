@@ -5,6 +5,8 @@ import { colors } from 'unocss/preset-mini'
 
 const types = ['primary', 'secondary', 'accent', 'success', 'info', 'warning', 'error']
 const levels = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
+const sizes = ['xs', 'sm', 'md', 'base', 'lg']
+const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'sm', 'md', 'lg']
 
 export default defineConfig({
   presets: [
@@ -40,6 +42,11 @@ export default defineConfig({
     ...types.map((t) => levels.map((l) => `focus:border-${t}-${l}`)).flat(),
     ...types.map((t) => `border-r-${t}-500`),
     ...types.map((t) => `button-${t}`),
+    ...fractions.map(f => `w-${f} h-${f}`.split(' ')).flat(),
+    ...types.map(t => `border-r-${t}-500`),
+    ...sizes.map(s => `rounded-${s}`),
+    ...sizes.map(s => `text-${s}`),
+    ...sizes.map(s => `btn-${s}`),
     'btn'
   ],
   theme: {
@@ -57,6 +64,12 @@ export default defineConfig({
   shortcuts: [
     {
       'btn': 'border-0 box-border cursor-default *:border-0 *:box-border before:border-0 before:box-border after:border-0 after:box-border disabled:cursor-default',
+      'btn-lg': 'h-16 min-h-16 px-16 text-lg font-black',
+      'btn-md': 'h-12 min-h-12 px-12 text-base font-medium',
+      'btn-base': 'h-12 min-h-12 px-12 text-base font-medium',
+      'btn-sm': 'h-8 min-h-8 px-8 text-sm font-light',
+      'btn-xs': 'h-6 min-h-6 px-6 text-xs font-thin',
+      
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],

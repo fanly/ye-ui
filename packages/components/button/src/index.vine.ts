@@ -35,25 +35,24 @@ export function YeButton(props: {
   // ...
   mode: ButtonMode
   type: 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
+  size?: 'xs' | 'sm' | 'md' | 'lg'
   text?: string
   nextText?: string
 }) {
-  const buttonType = computed(() => `button-${props.type}`)
-
   const isButtonMode = (mode: string) => mode == props.mode
   return vine`
-    <YeBasicButton :type="buttonType" v-if="isButtonMode('basic')"><slot /></YeBasicButton>
-    <YeGlowButton :type="buttonType" v-if="isButtonMode('glow')"><slot /></YeGlowButton>
-    <YeTextSlideButton :type="buttonType" v-if="isButtonMode('text-slide')"><slot /></YeTextSlideButton>
-    <YeMarqueeSignButton :type="buttonType" :text :nextText v-if="isButtonMode('marquee-sign')"><slot /></YeMarqueeSignButton>
-    <YeIconSlideButton :type="buttonType" v-if="isButtonMode('icon-slide')"><slot /></YeIconSlideButton>
-    <YeNeumorphism1Button :type="buttonType" v-if="isButtonMode('neumorphism-1')"><slot /></YeNeumorphism1Button>
-    <YeNeumorphism2Button :type="buttonType" v-if="isButtonMode('neumorphism-2')"><slot /></YeNeumorphism2Button>
-    <YeNeumorphism3Button :type="buttonType" v-if="isButtonMode('neumorphism-3')"><slot /></YeNeumorphism3Button>
-    <YeNeumorphism4Button :type="buttonType" v-if="isButtonMode('neumorphism-4')"><slot /></YeNeumorphism4Button>
-    <YeIconPulseButton :type="buttonType" v-if="isButtonMode('icon-pulse')"><slot /></YeIconPulseButton>
-    <YeTiltedDiagonalButton :type="buttonType" v-if="isButtonMode('tilted-diagonal')"><slot /></YeTiltedDiagonalButton>
-    <YeDiagonalSwipeButton :type="buttonType" v-if="isButtonMode('diagonal-swipe')"><slot /></YeDiagonalSwipeButton>
-    <YeDoubleDiagonalButton :type="buttonType" v-if="isButtonMode('double-diagonal')"><slot /></YeDoubleDiagonalButton>
+    <YeBasicButton :type :size v-if="isButtonMode('basic')"><slot /></YeBasicButton>
+    <YeGlowButton :type v-if="isButtonMode('glow')"><slot /></YeGlowButton>
+    <YeTextSlideButton :type v-if="isButtonMode('text-slide')"><slot /></YeTextSlideButton>
+    <YeMarqueeSignButton :type :text :nextText v-if="isButtonMode('marquee-sign')"><slot /></YeMarqueeSignButton>
+    <YeIconSlideButton :type v-if="isButtonMode('icon-slide')"><slot /></YeIconSlideButton>
+    <YeNeumorphism1Button :type v-if="isButtonMode('neumorphism-1')"><slot /></YeNeumorphism1Button>
+    <YeNeumorphism2Button :type v-if="isButtonMode('neumorphism-2')"><slot /></YeNeumorphism2Button>
+    <YeNeumorphism3Button :type v-if="isButtonMode('neumorphism-3')"><slot /></YeNeumorphism3Button>
+    <YeNeumorphism4Button :type v-if="isButtonMode('neumorphism-4')"><slot /></YeNeumorphism4Button>
+    <YeIconPulseButton :type v-if="isButtonMode('icon-pulse')"><slot /></YeIconPulseButton>
+    <YeTiltedDiagonalButton :type v-if="isButtonMode('tilted-diagonal')"><slot /></YeTiltedDiagonalButton>
+    <YeDiagonalSwipeButton :type v-if="isButtonMode('diagonal-swipe')"><slot /></YeDiagonalSwipeButton>
+    <YeDoubleDiagonalButton :type v-if="isButtonMode('double-diagonal')"><slot /></YeDoubleDiagonalButton>
   `
 }

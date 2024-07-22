@@ -2,8 +2,6 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-image: none;
-  font-size: 100%;
-  line-height: 1.5;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
@@ -25,7 +23,6 @@
     -5px -5px 10px #faffff;
   box-sizing: border-box;
   display: block;
-  font-weight: 900;
   -webkit-mask-image: none;
   overflow: hidden;
   padding: 1.2rem 3rem;
