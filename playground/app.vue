@@ -11,15 +11,15 @@ import { YeButton } from '@ye-ui/components'
     <YeButton mode="glow" type="error">
       glow
     </YeButton>
-    <YeButton mode="text-slide" type="primary">
+    <YeButton mode="text-slide" type="success">
       text-slide
     </YeButton>
 
-    <YeButton mode="neumorphism-1" type="primary">
+    <YeButton mode="neumorphism-1" type="info">
       neumorphism-1
     </YeButton>
 
-    <YeButton mode="neumorphism-2" type="primary">
+    <YeButton mode="neumorphism-2" type="error">
       neumorphism-2
     </YeButton>
 
@@ -27,7 +27,7 @@ import { YeButton } from '@ye-ui/components'
       neumorphism-3
     </YeButton>
 
-    <YeButton mode="neumorphism-4" type="primary">
+    <YeButton mode="neumorphism-4" type="warning">
       neumorphism-4
     </YeButton>
 

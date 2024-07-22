@@ -1,9 +1,9 @@
-import {themeType} from "../../../.type.ts"
+import {sizeType, themeType} from "../../../.type.ts"
 import {computed} from "vue"
 export function YeMarqueeSignButton() {
   vineStyle.scoped(`@import 'marquee-sign'`)
   const type = vineProp.withDefault<themeType>('info')
-  const size = vineProp.withDefault<'xs' | 'sm' | 'md' | 'lg'>('md')
+  const size = vineProp.withDefault<sizeType>('md')
   const text = vineProp.withDefault<string>('text')
   const nextText = vineProp.withDefault<string>('nextText')
   
