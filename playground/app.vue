@@ -33,7 +33,7 @@ import { YeButton } from '@ye-ui/components'
 
     <YeButton mode="marquee-sign" type="warning" text="ye" next-text="meishu" />
 
-    <YeButton mode="icon-slide" type="success">
+    <YeButton mode="icon-slide" type="success" size="lg">
       <svg viewBox="0 0 45.917 45.917">
         <path
           d="M33.523,28.334c-0.717,1.155-1.498,2.358-2.344,3.608c7.121,1.065,10.766,3.347,10.766,4.481
@@ -50,7 +50,7 @@ import { YeButton } from '@ye-ui/components'
       </svg>
     </YeButton>
 
-    <YeButton mode="icon-pulse" type="success">
+    <YeButton mode="icon-pulse" type="success" size="lg">
       <svg viewBox="0 0 597.975 597.975">
         <path
           d="M325.125,26.138c-33.15,0-65.025,6.375-95.625,17.85c0,1.275,0,1.275,0,2.55v52.275

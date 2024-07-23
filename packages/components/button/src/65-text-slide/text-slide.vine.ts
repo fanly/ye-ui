@@ -4,10 +4,10 @@ export function YeTextSlideButton() {
   vineStyle.scoped(`@import 'text-slide.css'`)
   const type = vineProp.withDefault<themeType>('info')
   const size = vineProp.withDefault<sizeType>('md')
-  const buttonType = computed(() => `button-${props.type}`)
-  const btn_size = computed(() => `btn-${size.value}`)
+  const btnClass = computed(() => [`button-${props.type}`, `btn-${size.value}`])
+  
   return vine`
-    <button class="btn btn-66 font-sans" :class="[buttonType, btn_size]">
+    <button class="btn btn-66 font-sans" :class="btnClass">
       <slot />
     </button>
   `

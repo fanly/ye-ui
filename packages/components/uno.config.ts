@@ -47,6 +47,7 @@ export default defineConfig({
     ...sizes.map(s => `rounded-${s}`),
     ...sizes.map(s => `text-${s}`),
     ...sizes.map(s => `btn-${s}`),
+    ...sizes.map(s => `btn-c-${s}`),
     'btn'
   ],
   theme: {
@@ -69,7 +70,11 @@ export default defineConfig({
       'btn-base': 'h-12 min-h-12 px-12 text-base font-medium',
       'btn-sm': 'h-8 min-h-8 px-8 text-sm font-light',
       'btn-xs': 'h-6 min-h-6 px-6 text-xs font-thin',
-      
+      'btn-c-lg': 'w-24 h-24 rounded-1/2 p-4 text-lg font-black',
+      'btn-c-md': 'w-20 h-20 rounded-1/2 p-2 text-base font-medium',
+      'btn-c-base': 'w-20 h-20 rounded-1/2 p-2 text-base font-medium',
+      'btn-c-sm': 'w-18 h-18 rounded-1/2 p-1 text-sm font-light',
+      'btn-c-xs': 'w-14 h-14 rounded-1/2 p-0.5 text-xs font-thin',
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],

@@ -2,9 +2,7 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-image: none;
-  margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
 }
 .btn-89:-moz-focusring {
   outline: auto;
@@ -17,14 +15,11 @@
 }
 .btn-89 {
   border: 2px solid;
-  border-radius: 50%;
   box-sizing: border-box;
   display: block;
-  height: 90px;
   overflow: hidden;
   position: relative;
   text-transform: uppercase;
-  width: 90px;
 }
 .btn-89:hover {
   -webkit-animation: pulse 0.6s;

@@ -2,9 +2,7 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-image: none;
-  margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
 }
 .btn-66:-moz-focusring {
   outline: auto;
@@ -26,7 +24,6 @@
   display: block;
   line-height: var(--height);
   overflow: hidden;
-  padding: 0 60px;
   position: relative;
   text-shadow:
     0 calc(var(--progress) * -1) #fff,

@@ -2,9 +2,13 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-image: none;
-  margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
+  border: 5px solid;
+  box-sizing: border-box;
+  display: block;
+  -webkit-mask-image: none;
+  position: relative;
+  text-transform: uppercase;
 }
 .btn-88:-moz-focusring {
   outline: auto;
@@ -12,33 +16,18 @@
 .btn-88 svg {
   display: block;
   vertical-align: middle;
-}
-.btn-88 [hidden] {
-  display: none;
-}
-.btn-88 {
-  border: 5px solid;
-  border-radius: 50%;
-  box-sizing: border-box;
-  display: block;
-  height: 90px;
-  -webkit-mask-image: none;
-  padding: 15px;
-  position: relative;
-  text-transform: uppercase;
-  width: 90px;
-}
-.btn-88 svg {
   fill: #000;
   position: relative;
   z-index: 1;
 }
+.btn-88 [hidden] {
+  display: none;
+}
+
 .btn-88:hover svg {
   fill: #fff;
 }
 .btn-88:before {
-  background: #fff;
-  border-radius: 50%;
   content: '';
   inset: 4px;
   opacity: 1;
