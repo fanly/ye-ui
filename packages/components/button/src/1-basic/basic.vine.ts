@@ -1,5 +1,5 @@
-import {computed} from "vue";
-import {sizeType, themeType} from "../../../.type.ts";
+import { computed } from 'vue'
+import { sizeType, themeType } from '../../../.type.ts'
 
 export function YeBasicButton() {
   vineStyle.scoped(`@import 'basic.css'`)

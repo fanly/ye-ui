@@ -1,14 +1,20 @@
 import { resolve } from 'node:path'
-import UnoCSS from 'unocss/vite'
 import { VineVitePlugin } from 'vue-vine/vite'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import browserslist from 'browserslist'
 import { browserslistToTargets } from 'lightningcss'
+import transformerDirective from '@unocss/transformer-directives'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), UnoCSS(), VineVitePlugin()],
+  plugins: [
+    vue(),
+    Unocss({
+      transformers: [transformerDirective()],
+    }),
+    VineVitePlugin(),
+  ],
   css: {
     transformer: 'lightningcss',
     lightningcss: {

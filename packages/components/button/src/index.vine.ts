@@ -13,7 +13,7 @@ import { YeNeumorphism3Button } from './74-neumorphism-3/neumorphism-3.vine.ts'
 import { YeNeumorphism4Button } from './75-neumorphism-4/neumorphism-4.vine.ts'
 import { YeDoubleDiagonalButton } from './80-double-diagonal/double-diagonal.vine.ts'
 import { YeIconPulseButton } from './89-icon-pulse/icon-pulse.vine.ts'
-import { ButtonMode, sizeType, themeType } from "../../.type.ts";
+import { ButtonMode, sizeType, themeType } from '../../.type.ts'
 
 export function YeButton(props: {
   // ...

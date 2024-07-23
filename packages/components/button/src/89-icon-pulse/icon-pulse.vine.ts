@@ -1,5 +1,5 @@
-import {sizeType, themeType} from "../../../.type.ts"
-import {computed} from "vue"
+import { sizeType, themeType } from '../../../.type.ts'
+import { computed } from 'vue'
 
 export function YeIconPulseButton() {
   vineStyle.scoped(`@import 'icon-pulse.css'`)

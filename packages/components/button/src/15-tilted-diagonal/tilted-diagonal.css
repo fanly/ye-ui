@@ -32,7 +32,7 @@
 }
 .btn-20:before {
   background: #fff;
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   left: -100%;

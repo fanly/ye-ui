@@ -42,13 +42,13 @@ export default defineConfig({
     ...types.map((t) => levels.map((l) => `focus:border-${t}-${l}`)).flat(),
     ...types.map((t) => `border-r-${t}-500`),
     ...types.map((t) => `button-${t}`),
-    ...fractions.map(f => `w-${f} h-${f}`.split(' ')).flat(),
-    ...types.map(t => `border-r-${t}-500`),
-    ...sizes.map(s => `rounded-${s}`),
-    ...sizes.map(s => `text-${s}`),
-    ...sizes.map(s => `btn-${s}`),
-    ...sizes.map(s => `btn-c-${s}`),
-    'btn'
+    ...fractions.map((f) => `w-${f} h-${f}`.split(' ')).flat(),
+    ...types.map((t) => `border-r-${t}-500`),
+    ...sizes.map((s) => `rounded-${s}`),
+    ...sizes.map((s) => `text-${s}`),
+    ...sizes.map((s) => `btn-${s}`),
+    ...sizes.map((s) => `btn-c-${s}`),
+    'btn',
   ],
   theme: {
     colors: {
@@ -64,7 +64,7 @@ export default defineConfig({
   rules: [],
   shortcuts: [
     {
-      'btn': 'border-0 box-border cursor-default *:border-0 *:box-border before:border-0 before:box-border after:border-0 after:box-border disabled:cursor-default',
+      btn: 'border-0 box-border cursor-default *:border-0 *:box-border before:border-0 before:box-border after:border-0 after:box-border disabled:cursor-default',
       'btn-lg': 'h-16 min-h-16 px-16 text-lg font-black',
       'btn-md': 'h-12 min-h-12 px-12 text-base font-medium',
       'btn-base': 'h-12 min-h-12 px-12 text-base font-medium',
@@ -78,5 +78,5 @@ export default defineConfig({
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
-  ]
+  ],
 })

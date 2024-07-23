@@ -29,14 +29,9 @@
 .btn-8:after,
 .btn-8:before {
   --tilt: 1.2rem;
-  -webkit-clip-path: polygon(
-    0 0,
-    calc(100% - var(--tilt)) 0,
-    100% 100%,
-    0 100%
-  );
+  -webkit-clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   left: calc(-100% - var(--tilt));
