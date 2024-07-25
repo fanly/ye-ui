@@ -4,15 +4,13 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import browserslist from 'browserslist'
 import { browserslistToTargets } from 'lightningcss'
-import transformerDirective from '@unocss/transformer-directives'
+import { unocss } from "@antfu/eslint-config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    Unocss({
-      transformers: [transformerDirective()],
-    }),
+    unocss(),
     VineVitePlugin(),
   ],
   css: {

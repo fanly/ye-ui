@@ -4,9 +4,6 @@
   background-image: none;
   border-radius: 99rem;
   border-width: 2px;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  text-transform: uppercase;
 }
 
 .btn-1:-moz-focusring {
