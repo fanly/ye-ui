@@ -1,16 +1,16 @@
 import { resolve } from 'node:path'
+import UnoCSS from 'unocss/vite'
 import { VineVitePlugin } from 'vue-vine/vite'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import browserslist from 'browserslist'
 import { browserslistToTargets } from 'lightningcss'
-import { unocss } from "@antfu/eslint-config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    unocss(),
+    UnoCSS(),
     VineVitePlugin(),
   ],
   css: {
