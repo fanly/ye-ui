@@ -4,7 +4,8 @@ import { VineVitePlugin } from 'vue-vine/vite'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import browserslist from 'browserslist'
-import { browserslistToTargets } from 'lightningcss'
+import type { CSSModulesConfig} from 'lightningcss';
+import { browserslistToTargets  } from 'lightningcss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,10 +17,17 @@ export default defineConfig({
   css: {
     transformer: 'lightningcss',
     lightningcss: {
+      filename: 'style.min.css',
       targets: browserslistToTargets(browserslist('>= 0.25%')),
+      minify: true,
+      sourceMap: true,
+      cssModules: {
+        dashedIdents: true
+      } as CSSModulesConfig
     },
   },
   build: {
+    sourcemap: true,
     emptyOutDir: false,
     cssMinify: 'lightningcss',
     lib: {
