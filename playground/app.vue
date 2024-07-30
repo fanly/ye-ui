@@ -98,5 +98,6 @@ import { YeButton, YeInput } from '@ye-ui/components'
 
 
     <YeInput mode="search" type="error" />
+    <YeInput mode="wave-group" type="info" />
   </div>
 </template>

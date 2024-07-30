@@ -18,6 +18,7 @@ export type ButtonMode =
 export type InputMode =
   | 'basic'
   | 'search'
+  | 'wave-group'
 
 export type themeType = 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
 
