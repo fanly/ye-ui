@@ -14,6 +14,11 @@ export type ButtonMode =
   | 'neumorphism-4'
   | 'double-diagonal'
   | 'icon-pulse'
+
+export type InputMode =
+  | 'basic'
+  | 'search'
+
 export type themeType = 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
 
 export type sizeType = 'xs' | 'sm' | 'md' | 'lg'

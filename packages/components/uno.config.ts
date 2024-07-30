@@ -42,6 +42,7 @@ export default defineConfig({
     ...types.map((t) => levels.map((l) => `focus:border-${t}-${l}`)).flat(),
     ...types.map((t) => `border-r-${t}-500`),
     ...types.map((t) => `button-${t}`),
+    ...types.map((t) => `input-theme-${t}`),
     ...fractions.map((f) => `w-${f} h-${f}`.split(' ')).flat(),
     ...types.map((t) => `border-r-${t}-500`),
     ...sizes.map((s) => `rounded-${s}`),
@@ -78,5 +79,6 @@ export default defineConfig({
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
+    [/^input-theme-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
   ],
 })

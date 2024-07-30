@@ -1,11 +1,12 @@
 import 'uno.css'
 import type { App } from 'vue'
 import { YeButton } from './button'
+import { YeInput } from './input'
 
-const component = [YeButton]
+const component = [YeButton, YeInput]
 
 // 按需引入
-export { YeButton }
+export { YeButton, YeInput }
 
 const Components = {
   install(app: App) {

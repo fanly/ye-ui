@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import '@ye-ui/components/style.css'
-import { YeButton } from '@ye-ui/components'
+import { YeButton, YeInput } from '@ye-ui/components'
 </script>
 
 <template>
@@ -95,5 +95,8 @@ import { YeButton } from '@ye-ui/components'
     <button class="text-lg">
       普通按钮
     </button>
+
+
+    <YeInput mode="search" type="error" />
   </div>
 </template>
