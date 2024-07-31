@@ -15,10 +15,7 @@ export type ButtonMode =
   | 'double-diagonal'
   | 'icon-pulse'
 
-export type InputMode =
-  | 'basic'
-  | 'search'
-  | 'wave-group'
+export type InputMode = 'basic' | 'search' | 'wave-group'
 
 export type themeType = 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
 

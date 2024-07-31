@@ -79,7 +79,8 @@ export default defineConfig({
       'btn-c-xs': 'w-14 h-14 rounded-1/2 p-0.5 text-xs font-thin',
     },
     {
-      'input-c-md': 'w-12 h-12 rounded-1/2 p-2.5 pr-10 text-base font-medium border-none outline-none shadow shadow-zinc-700 duration-500 ease-in-out'
+      'input-c-md':
+        'w-12 h-12 rounded-1/2 p-2.5 pr-10 text-base font-medium border-none outline-none shadow shadow-zinc-700 duration-500 ease-in-out',
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],

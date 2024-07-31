@@ -9,7 +9,7 @@ export default antfu(
     // 在这里覆盖 antfu 的设置：
     // - 目前不支持 ESLint Stylistic
     stylistic: false,
-    ignores: ['node_modules', 'dist', 'button/**/*.vine.ts'],
+    ignores: ['node_modules', 'dist', '**/**/*.vine.ts'],
   },
   {
     ignores: ['/dist', '/node_modules', '/packages/**/dist', '/packages/**/node_modules'],
@@ -32,7 +32,7 @@ export default antfu(
     },
   },
   {
-    files: ['button/**/*.vine.ts'],
+    files: ['**/**/*.vine.ts'],
     languageOptions: {
       parser: VueVineESLintParser,
     },

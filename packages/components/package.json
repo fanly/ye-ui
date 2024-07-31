@@ -43,7 +43,7 @@
     "preview": "bunx --bun vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "bun prettier . --write"
+    "format": "bunx --bun prettier . --write"
   },
   "dependencies": {
     "lightningcss": "^1.25.1",

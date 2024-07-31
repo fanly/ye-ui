@@ -1,7 +1,6 @@
-<script setup lang='ts'>
-
+<script setup lang="ts">
 import { computed } from 'vue'
-import type { sizeType, themeType}  from "../../../.type.ts"
+import type { sizeType, themeType } from '../../../.type.ts'
 
 interface Props {
   type?: themeType
@@ -14,7 +13,7 @@ const props = withDefaults(defineProps<Props>(), {
   type: 'info',
   size: 'md',
   name: 'name',
-  width: '200px'
+  width: '200px',
 })
 
 const inputType = computed(() => `input-theme-${props.type}`)
@@ -65,14 +64,14 @@ console.log(`${inputType.value}-${inputCSize.value}`)
 
 .wave-group .label-char {
   transition: 0.2s ease all;
-  transition-delay: calc(var(--index) * .05s);
+  transition-delay: calc(var(--index) * 0.05s);
 }
 
 .wave-group .input:focus ~ label .label-char,
 .wave-group .input:valid ~ label .label-char {
   transform: translateY(-20px);
   font-size: 14px;
-  color: #5264AE;
+  color: #5264ae;
 }
 
 .wave-group .bar {
@@ -80,13 +79,14 @@ console.log(`${inputType.value}-${inputCSize.value}`)
   display: block;
 }
 
-.wave-group .bar:before,.wave-group .bar:after {
+.wave-group .bar:before,
+.wave-group .bar:after {
   content: '';
   height: 2px;
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #5264AE;
+  background: #5264ae;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;

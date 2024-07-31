@@ -4,16 +4,12 @@ import { VineVitePlugin } from 'vue-vine/vite'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import browserslist from 'browserslist'
-import type { CSSModulesConfig} from 'lightningcss';
-import { browserslistToTargets  } from 'lightningcss'
+import type { CSSModulesConfig } from 'lightningcss'
+import { browserslistToTargets } from 'lightningcss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    UnoCSS(),
-    VineVitePlugin(),
-  ],
+  plugins: [vue(), UnoCSS(), VineVitePlugin()],
   css: {
     transformer: 'lightningcss',
     lightningcss: {
@@ -22,8 +18,8 @@ export default defineConfig({
       minify: true,
       sourceMap: true,
       cssModules: {
-        dashedIdents: true
-      } as CSSModulesConfig
+        dashedIdents: true,
+      } as CSSModulesConfig,
     },
   },
   build: {
