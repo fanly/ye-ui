@@ -1,5 +1,5 @@
 // uno.config.ts
-import { defineConfig, presetUno } from 'unocss'
+import { defineConfig, presetWind } from 'unocss'
 import presetWebFonts from '@unocss/preset-web-fonts'
 import { colors } from 'unocss/preset-mini'
 
@@ -10,7 +10,7 @@ const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120',
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetWind(),
     presetWebFonts({
       provider: 'google', // default provider
       fonts: {
@@ -50,6 +50,7 @@ export default defineConfig({
     ...sizes.map((s) => `btn-${s}`),
     ...sizes.map((s) => `btn-c-${s}`),
     'btn',
+    ...sizes.map((s) => `input-c-${s}`),
   ],
   theme: {
     colors: {
@@ -76,6 +77,9 @@ export default defineConfig({
       'btn-c-base': 'w-20 h-20 rounded-1/2 p-2 text-base font-medium',
       'btn-c-sm': 'w-18 h-18 rounded-1/2 p-1 text-sm font-light',
       'btn-c-xs': 'w-14 h-14 rounded-1/2 p-0.5 text-xs font-thin',
+    },
+    {
+      'input-c-md': 'w-12 h-12 rounded-1/2 p-2.5 pr-10 text-base font-medium border-none outline-none shadow shadow-zinc-700 duration-500 ease-in-out'
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],

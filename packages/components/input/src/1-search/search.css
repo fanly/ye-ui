@@ -12,19 +12,6 @@
   position: relative;
 }
 
-.input {
-  border-style: none;
-  height: 50px;
-  width: 50px;
-  padding: 10px;
-  outline: none;
-  border-radius: 50%;
-  transition: .5s ease-in-out;
-  box-shadow: 0 0 3px #f3f3f3;
-  padding-right: 40px;
-  color: #fff;
-}
-
 .input::placeholder,
 .input {
   font-size: 17px;

@@ -98,6 +98,6 @@ import { YeButton, YeInput } from '@ye-ui/components'
 
 
     <YeInput mode="search" type="error" />
-    <YeInput mode="wave-group" type="info" />
+    <YeInput mode="wave-group" type="info" name="yemeishu" width="300px" />
   </div>
 </template>

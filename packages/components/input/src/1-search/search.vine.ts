@@ -4,9 +4,9 @@ import {themeType} from "../../../.type.ts";
 export function YeSearchInput() {
   vineStyle.scoped(`@import 'search.css'`)
   const type = vineProp.withDefault<themeType>('info')
-  // const size = vineProp.withDefault<sizeType>('md')
-  const inputType = computed(() => `input-theme-${props.type}`)
-  // const btn_size = computed(() => `btn-${size.value}`)
+  const size = vineProp.withDefault<sizeType>('md')
+  const inputType = computed(() => `input-theme-${type.value}`)
+  const inputCSize = computed(() => `input-c-${size.value}`)
   return vine`
     <div class="input-wrapper">
       <button class="icon">
@@ -17,7 +17,7 @@ export function YeSearchInput() {
          </svg>
        </slot>
       </button>
-      <input placeholder="search.." class="input" :class="inputType" name="text" type="text">
+      <input placeholder="search.." class="input" :class="[inputType, inputCSize]" name="text" type="text">
     </div>
   `
 }
