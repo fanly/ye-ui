@@ -6,9 +6,7 @@ export default antfu(
     type: 'lib',
     unocss: true,
     vue: true,
-    typescript: {
-      tsconfigPath: 'tsconfig.json',
-    },
+    typescript: true,
     // 在这里覆盖 antfu 的设置：
     // - 目前不支持 ESLint Stylistic
     stylistic: false,
@@ -25,7 +23,6 @@ export default antfu(
        */
       markdown: 'prettier'
     },
-    ignores: ['node_modules', 'dist', '**/src/**/*.vine.ts'],
     rules: {
       '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
       '@typescript-eslint/ban-ts-comment': 'warn',
@@ -45,12 +42,17 @@ export default antfu(
     },
   },
   {
+    ignores: [
+      'node_modules', 'dist', '**/src/**/*.vine.ts'
+    ],
+  },
+  {
     files: ['**/src/**/*.vine.ts'],
     languageOptions: {
       parser: VueVineESLintParser,
     },
     rules: {
-      'no-console': 'off',
+      'no-console': 'warn',
     },
   }
 )
