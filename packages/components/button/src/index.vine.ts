@@ -1,19 +1,4 @@
-import { YeBasicButton } from './1-basic/basic.vine.ts'
-import { YeClickFillButton } from './2-click-to-fill/click-to-fill.vine.ts'
-import { YeCoverOverButton } from './3-cover-over/cover-over.vine.ts'
-import { YeGlowButton } from './4-glow-button/glow-button.vine.ts'
-import { YeTiltedDiagonalButton } from './15-tilted-diagonal/tilted-diagonal.vine.ts'
-import { YeMarqueeSignButton } from './18-marquee-sign/marquee-sign.vine.ts'
-import { YeDiagonalSwipeButton } from './36-diagonal-swipe/diagonal-swipe.vine.ts'
-import { YeTextSlideButton } from './65-text-slide/text-slide.vine.ts'
-import { YeIconSlideButton } from './90-icon-slide/icon-slide.vine.ts'
-import { YeNeumorphism1Button } from './72-neumorphism-1/neumorphism-1.vine.ts'
-import { YeNeumorphism2Button } from './73-neumorphism-2/neumorphism-2.vine.ts'
-import { YeNeumorphism3Button } from './74-neumorphism-3/neumorphism-3.vine.ts'
-import { YeNeumorphism4Button } from './75-neumorphism-4/neumorphism-4.vine.ts'
-import { YeDoubleDiagonalButton } from './80-double-diagonal/double-diagonal.vine.ts'
-import { YeIconPulseButton } from './89-icon-pulse/icon-pulse.vine.ts'
-import { ButtonMode, sizeType, themeType } from '../../.type.ts'
+import type { ButtonMode, sizeType, themeType } from '../../utils/.type.ts'
 
 export function YeButton(props: {
   // ...
@@ -23,7 +8,7 @@ export function YeButton(props: {
   text?: string
   nextText?: string
 }) {
-  const isButtonMode = (mode: string) => mode == props.mode
+  const isButtonMode = (mode: string) : boolean => mode === props.mode
   return vine`
     <YeBasicButton :type :size v-if="isButtonMode('basic')"><slot /></YeBasicButton>
     <YeGlowButton :type :size v-if="isButtonMode('glow')"><slot /></YeGlowButton>

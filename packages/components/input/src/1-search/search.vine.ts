@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import type { themeType } from '../../../.type.ts'
+import type { themeType } from 'utils/.type.ts'
 
 export function YeSearchInput() {
   vineStyle.scoped(`@import 'search.css'`)

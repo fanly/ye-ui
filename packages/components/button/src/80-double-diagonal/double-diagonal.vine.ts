@@ -1,5 +1,5 @@
-import { sizeType, themeType } from '../../../.type.ts'
 import { computed } from 'vue'
+import type { sizeType, themeType } from '../../../utils/.type.ts'
 export function YeDoubleDiagonalButton() {
   vineStyle.scoped(`@import 'double-diagonal.css'`)
   const type = vineProp.withDefault<themeType>('info')

@@ -1,5 +1,5 @@
-import { sizeType, themeType } from '../../../.type.ts'
 import { computed } from 'vue'
+import type { sizeType, themeType } from '../../../utils/.type.ts'
 
 export function YeNeumorphism4Button() {
   vineStyle.scoped(`@import 'neumorphism-4.css'`)

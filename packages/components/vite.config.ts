@@ -13,10 +13,7 @@ export default defineConfig({
   css: {
     transformer: 'lightningcss',
     lightningcss: {
-      filename: 'style.min.css',
       targets: browserslistToTargets(browserslist('>= 0.25%')),
-      minify: true,
-      sourceMap: true,
       cssModules: {
         dashedIdents: true,
       } as CSSModulesConfig,
@@ -39,4 +36,9 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      "utils": resolve(__dirname, "utils"),
+    }
+  }
 })
