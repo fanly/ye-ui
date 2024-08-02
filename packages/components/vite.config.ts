@@ -1,4 +1,5 @@
 import { resolve } from 'node:path'
+import { URL, fileURLToPath } from 'node:url'
 import UnoCSS from 'unocss/vite'
 import { VineVitePlugin } from 'vue-vine/vite'
 import { defineConfig } from 'vite'
@@ -38,7 +39,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "utils": resolve(__dirname, "utils"),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      'utils': fileURLToPath(new URL('./src/utils', import.meta.url))
     }
   }
 })

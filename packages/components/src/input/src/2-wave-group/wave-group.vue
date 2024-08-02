@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { sizeType, themeType } from 'utils/.type.ts'
+import type { sizeType, themeType } from '@/utils/.type.ts'
 
 interface Props {
   type?: themeType
@@ -41,8 +41,7 @@ console.log(`${inputType.value}-${inputCSize.value}`)
 .wave-group .input {
   font-size: 16px;
   padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
+  @apply block border-none;
   border-bottom: 1px solid #515151;
   background: transparent;
 }

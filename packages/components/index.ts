@@ -1,7 +1,7 @@
 import 'uno.css'
 import type { App } from 'vue'
-import { YeButton } from './button'
-import { YeInput } from './input'
+import { YeButton } from '@/button'
+import { YeInput } from '@/input'
 
 const component = [YeButton, YeInput]
 

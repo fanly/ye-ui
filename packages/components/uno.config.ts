@@ -1,5 +1,5 @@
 // uno.config.ts
-import { defineConfig, presetWind } from 'unocss'
+import { defineConfig, presetAttributify, presetWind, transformerDirectives } from 'unocss'
 import presetWebFonts from '@unocss/preset-web-fonts'
 import { colors } from 'unocss/preset-mini'
 
@@ -11,6 +11,8 @@ const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120',
 export default defineConfig({
   presets: [
     presetWind(),
+    presetAttributify(),
+    transformerDirectives(),
     presetWebFonts({
       provider: 'google', // default provider
       fonts: {
