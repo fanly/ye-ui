@@ -1,5 +1,6 @@
 import { computed } from 'vue'
-import type { sizeType, themeType } from '../../../utils/.type.ts'
+import type { sizeType, themeType } from 'utils/.type'
+
 export function YeGlowButton() {
   vineStyle.scoped(`@import 'glow-button.css'`)
   const type = vineProp.withDefault<themeType>('info')

@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import type { sizeType, themeType } from '../../../utils/.type.ts'
+import type { sizeType, themeType } from 'utils/.type'
 
 export function YeIconSlideButton() {
   vineStyle.scoped(`@import 'icon-slide.css'`)

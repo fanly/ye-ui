@@ -1,5 +1,6 @@
 import { computed } from 'vue'
-import type { sizeType, themeType } from '../../../utils/.type.ts'
+import type { sizeType, themeType } from 'utils/.type'
+
 export function YeTextSlideButton() {
   vineStyle.scoped(`@import 'text-slide.css'`)
   const type = vineProp.withDefault<themeType>('info')

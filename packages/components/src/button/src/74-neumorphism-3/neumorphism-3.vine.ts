@@ -1,5 +1,6 @@
 import { computed } from 'vue'
-import type { sizeType, themeType } from '../../../utils/.type.ts'
+import type { sizeType, themeType } from 'utils/.type'
+
 export function YeNeumorphism3Button() {
   vineStyle.scoped(`@import 'neumorphism-3.css'`)
   const type = vineProp.withDefault<themeType>('info')

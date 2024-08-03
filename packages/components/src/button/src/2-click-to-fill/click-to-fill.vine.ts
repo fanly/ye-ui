@@ -1,5 +1,6 @@
 import { computed } from 'vue'
-import type { sizeType, themeType } from '../../../utils/.type.ts'
+import type { sizeType, themeType } from 'utils/.type'
+
 export function YeClickFillButton() {
   vineStyle.scoped(`@import 'click-to-fill.css'`)
   const type = vineProp.withDefault<themeType>('info')

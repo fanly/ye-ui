@@ -1,4 +1,6 @@
-import type { InputMode, sizeType, themeType } from '../../utils/.type.ts'
+import type { InputMode, sizeType, themeType } from 'utils/.type'
+import { YeSearchInput } from './1-search/search.vine'
+import WaveGroup from './2-wave-group/wave-group.vue'
 
 export function YeInput(props: {
   mode: InputMode
