@@ -45,11 +45,13 @@ export default defineConfig({
     ...types.map((t) => `border-r-${t}-500`),
     ...types.map((t) => `button-${t}`),
     ...types.map((t) => `input-theme-${t}`),
+    ...types.map((t) => `input-b-${t}`),
     ...fractions.map((f) => `w-${f} h-${f}`.split(' ')).flat(),
     ...types.map((t) => `border-r-${t}-500`),
     ...sizes.map((s) => `rounded-${s}`),
     ...sizes.map((s) => `text-${s}`),
     ...sizes.map((s) => `btn-${s}`),
+    ...sizes.map((s) => `input-${s}`),
     ...sizes.map((s) => `btn-c-${s}`),
     'btn',
     ...sizes.map((s) => `input-c-${s}`),
@@ -81,11 +83,17 @@ export default defineConfig({
       'btn-c-xs': 'w-14 h-14 rounded-1/2 p-0.5 text-xs font-thin',
     },
     {
+      'input-lg': 'block bg-transparent border-none border-0 p-4 text-lg font-black focus:outline-none',
+      'input-md': 'block bg-transparent border-none border-0 p-2.5 text-base font-medium focus:outline-none',
+      'input-base': 'block bg-transparent border-none border-0 p-2.5 text-base font-medium focus:outline-none',
+      'input-sm': 'block bg-transparent border-none border-0 p-2 text-sm font-light focus:outline-none',
+      'input-xs': 'block bg-transparent border-none border-0 p-1 text-xs font-thin focus:outline-none',
       'input-c-md':
         'w-12 h-12 rounded-1/2 p-2.5 pr-10 text-base font-medium border-none outline-none shadow shadow-zinc-700 duration-500 ease-in-out',
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
     [/^input-theme-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
+    [/^input-b-(.*)$/, ([, c]) => `bg-transparent border-solid border-b-1 border-b-${c}-400 text-${c}-100`],
   ],
 })

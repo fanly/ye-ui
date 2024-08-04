@@ -16,14 +16,13 @@ const props = withDefaults(defineProps<Props>(), {
   width: '200px',
 })
 
-const inputType = computed(() => `input-theme-${props.type}`)
-const inputCSize = computed(() => `input-c-${props.size}`)
-console.log(`${inputType.value}-${inputCSize.value}`)
+const inputType = computed(() => `input-b-${props.type}`)
+const inputSize = computed(() => `input-${props.size}`)
 </script>
 
 <template>
   <div class="wave-group" :style="`width: ${width}`">
-    <input required="" type="text" class="input" :style="`width: ${width}`">
+    <input required="" type="text" class="input" :class="[inputSize, inputType]" :style="`width: ${width}`">
     <span class="bar" :style="`width: ${width}`" />
     <label class="label">
       <span v-for="(value, key) in props.name" :key class="label-char" :style="`--index: ${key}`">
@@ -39,15 +38,6 @@ console.log(`${inputType.value}-${inputCSize.value}`)
 }
 
 .wave-group .input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  @apply block border-none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
-}
-
-.wave-group .input:focus {
-  outline: none;
 }
 
 .wave-group .label {
