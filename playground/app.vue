@@ -97,7 +97,9 @@ import { YeButton, YeInput } from '@ye-ui/components'
     </button>
 
 
-    <YeInput mode="search" type="error" />
+    <YeInput mode="search" type="success" />
+    <YeInput mode="search" type="info" />
     <YeInput mode="wave-group" type="info" name="yemeishu" width="300px" />
+    <YeInput mode="wave-group" type="error" name="吴海平" width="500px" />
   </div>
 </template>

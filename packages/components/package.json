@@ -54,6 +54,7 @@
     "@rollup/plugin-alias": "^5.1.0",
     "@unocss/eslint-plugin": "^0.61.5",
     "@unocss/preset-web-fonts": "^0.61.5",
+    "@unocss/transformer-directives": "^0.61.9",
     "@vitejs/plugin-vue": "^5.1.0",
     "@vue-vine/eslint-parser": "^0.1.14",
     "eslint": "^9.7.0",

@@ -1,5 +1,5 @@
 // uno.config.ts
-import { defineConfig, presetAttributify, presetWind, transformerDirectives } from 'unocss'
+import { defineConfig, presetAttributify, presetWind, transformerDirectives, transformerVariantGroup } from 'unocss'
 import presetWebFonts from '@unocss/preset-web-fonts'
 import { colors } from 'unocss/preset-mini'
 
@@ -12,7 +12,6 @@ export default defineConfig({
   presets: [
     presetWind(),
     presetAttributify(),
-    transformerDirectives(),
     presetWebFonts({
       provider: 'google', // default provider
       fonts: {
@@ -35,6 +34,15 @@ export default defineConfig({
       },
     }),
   ],
+  transformers: [
+    transformerDirectives({
+      // the defaults
+      applyVariable: ['--at-apply', '--uno-apply', '--uno'],
+      // or disable with:
+      // applyVariable: false
+    }),
+    transformerVariantGroup()
+  ],
   safelist: [
     ...types.map((t) => levels.map((l) => `bg-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `hover:bg-${t}-${l}`)).flat(),
@@ -53,7 +61,10 @@ export default defineConfig({
     ...sizes.map((s) => `btn-${s}`),
     ...sizes.map((s) => `input-${s}`),
     ...sizes.map((s) => `btn-c-${s}`),
+    ...sizes.map((s) => `c-${s}`),
     'btn',
+    'bar',
+    ...types.map((t) => `bar-${t}`),
     ...sizes.map((s) => `input-c-${s}`),
   ],
   theme: {
@@ -83,17 +94,28 @@ export default defineConfig({
       'btn-c-xs': 'w-14 h-14 rounded-1/2 p-0.5 text-xs font-thin',
     },
     {
+      'c-lg': 'w-20 h-20 rounded-full',
+      'c-md': 'w-16 h-16 rounded-full',
+      'c-base': 'w-16 h-16 rounded-full',
+      'c-sm': 'w-12 h-12 rounded-full',
+      'c-xs': 'w-10 h-10 rounded-full',
+    },
+    {
       'input-lg': 'block bg-transparent border-none border-0 p-4 text-lg font-black focus:outline-none',
       'input-md': 'block bg-transparent border-none border-0 p-2.5 text-base font-medium focus:outline-none',
       'input-base': 'block bg-transparent border-none border-0 p-2.5 text-base font-medium focus:outline-none',
       'input-sm': 'block bg-transparent border-none border-0 p-2 text-sm font-light focus:outline-none',
       'input-xs': 'block bg-transparent border-none border-0 p-1 text-xs font-thin focus:outline-none',
       'input-c-md':
-        'w-12 h-12 rounded-1/2 p-2.5 pr-10 text-base font-medium border-none outline-none shadow shadow-zinc-700 duration-500 ease-in-out',
+        'w-12 h-12 rounded-1/2 p-2.5 text-base font-medium border-none outline-none shadow shadow-zinc-700 duration-500 ease-in-out',
+    },
+    {
+      'bar': 'relative block before-content-[\'\'] after-content-[\'\'] before:(h-0.5 bottom-0.5 absolute transition-all duration-200 ease-linear left-1/2) after:(h-0.5 bottom-0.5 absolute transition-all duration-200 ease-linear right-1/2)'
     },
     // dynamic shortcuts
     [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
-    [/^input-theme-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
-    [/^input-b-(.*)$/, ([, c]) => `bg-transparent border-solid border-b-1 border-b-${c}-400 text-${c}-100`],
+    [/^input-theme-(.*)$/, ([, c]) => `bg-${c}-400 text-${c}-300`],
+    [/^input-b-(.*)$/, ([, c]) => `bg-transparent border-solid border-b border-b-${c}-300 text-${c}-300 focus:border-b-${c}-300`],
+    [/^bar-(.*)$/, ([, c]) => `before:bg-${c}-700 after:bg-${c}-700`],
   ],
 })
