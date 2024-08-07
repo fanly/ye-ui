@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
   width: '200px',
 })
 
-const inputType = computed(() => `bg-${props.type}-500`)
+const inputType = computed(() => `bg-${props.type}-5`)
 const inputCSize = computed(() => `c-${props.size}`)
 </script>
 

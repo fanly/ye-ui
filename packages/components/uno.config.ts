@@ -1,10 +1,10 @@
 // uno.config.ts
 import { defineConfig, presetAttributify, presetWind, transformerDirectives, transformerVariantGroup } from 'unocss'
 import presetWebFonts from '@unocss/preset-web-fonts'
-import { colors } from 'unocss/preset-mini'
-
+import presetYeTheme from './src/_theme'
 const types = ['primary', 'secondary', 'accent', 'success', 'info', 'warning', 'error']
-const levels = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
+// const levels = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
+const levels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 const sizes = ['xs', 'sm', 'md', 'base', 'lg']
 const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'sm', 'md', 'lg']
 
@@ -33,6 +33,7 @@ export default defineConfig({
         ],
       },
     }),
+    presetYeTheme(),
   ],
   transformers: [
     transformerDirectives({
@@ -50,12 +51,12 @@ export default defineConfig({
     ...types.map((t) => levels.map((l) => `text-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `focus:ring-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `focus:border-${t}-${l}`)).flat(),
-    ...types.map((t) => `border-r-${t}-500`),
+    ...types.map((t) => `border-r-${t}-5`),
     ...types.map((t) => `button-${t}`),
     ...types.map((t) => `input-theme-${t}`),
     ...types.map((t) => `input-b-${t}`),
     ...fractions.map((f) => `w-${f} h-${f}`.split(' ')).flat(),
-    ...types.map((t) => `border-r-${t}-500`),
+    ...types.map((t) => `border-r-${t}-5`),
     ...sizes.map((s) => `rounded-${s}`),
     ...sizes.map((s) => `text-${s}`),
     ...sizes.map((s) => `btn-${s}`),
@@ -67,17 +68,6 @@ export default defineConfig({
     ...types.map((t) => `bar-${t}`),
     ...sizes.map((s) => `input-c-${s}`),
   ],
-  theme: {
-    colors: {
-      primary: colors.indigo,
-      secondary: colors.teal,
-      accent: colors.pink,
-      success: colors.green,
-      info: colors.blue,
-      warning: colors.yellow,
-      error: colors.red,
-    },
-  },
   rules: [],
   shortcuts: [
     {
@@ -113,9 +103,9 @@ export default defineConfig({
       'bar': 'relative block before-content-[\'\'] after-content-[\'\'] before:(h-0.5 bottom-0.5 absolute transition-all duration-200 ease-linear left-1/2) after:(h-0.5 bottom-0.5 absolute transition-all duration-200 ease-linear right-1/2)'
     },
     // dynamic shortcuts
-    [/^button-(.*)$/, ([, c]) => `bg-${c}-400 hover:bg-${c}-800 text-${c}-100`],
-    [/^input-theme-(.*)$/, ([, c]) => `bg-${c}-400 text-${c}-300`],
-    [/^input-b-(.*)$/, ([, c]) => `bg-transparent border-solid border-b border-b-${c}-300 text-${c}-300 focus:border-b-${c}-300`],
-    [/^bar-(.*)$/, ([, c]) => `before:bg-${c}-700 after:bg-${c}-700`],
+    [/^button-(.*)$/, ([, c]) => `bg-${c}-4 hover:bg-${c}-8 text-${c}-1`],
+    [/^input-theme-(.*)$/, ([, c]) => `bg-${c}-4 text-${c}-3`],
+    [/^input-b-(.*)$/, ([, c]) => `bg-transparent border-solid border-b border-b-${c}-3 text-${c}-3 focus:border-b-${c}-3`],
+    [/^bar-(.*)$/, ([, c]) => `before:bg-${c}-7 after:bg-${c}-7`],
   ],
 })

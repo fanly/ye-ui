@@ -25,7 +25,7 @@ const barTheme = computed(() => `bar-${props.type}`)
   <div class="relative" :style="`width: ${width}`">
     <input required="" type="text" class="input" :class="[inputSize, inputType]" :style="`width: ${width}`">
     <span class="bar" :class="barTheme" />
-    <label :class="`label text-${props.type}-300`">
+    <label :class="`label text-${props.type}-3`">
       <span v-for="(value, key) in props.name" :key class="label-char" :style="`--index: ${key}`">
         {{ value }}
       </span>

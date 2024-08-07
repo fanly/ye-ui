@@ -24,18 +24,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
-    },
-    "./shortcuts": {
-      "types": "./dist/shortcuts.d.ts",
-      "import": "./dist/shortcuts.mjs",
-      "require": "./dist/shortcuts.js"
-    },
-    "./prefixes": {
-      "types": "./dist/prefixes.d.ts",
-      "import": "./dist/prefixes.mjs",
-      "require": "./dist/prefixes.js"
-    },
-    "./*": "./*"
+    }
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -43,13 +32,17 @@
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsup"
-  },
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@unocss/core": "^0.61.9"
+  },
   "devDependencies": {
+    "@unocss/rule-utils": "^0.61.9",
     "tsup": "^8.1.0"
   }
 }
