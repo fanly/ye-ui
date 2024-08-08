@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import '@ye-ui/components/style.css'
-import { YeButton, YeInput } from '@ye-ui/components'
+import { YeButton, YeInput, YeLoader } from '@ye-ui/components'
 </script>
 
 <template>
@@ -101,5 +101,7 @@ import { YeButton, YeInput } from '@ye-ui/components'
     <YeInput mode="search" type="info" />
     <YeInput mode="wave-group" type="info" name="yemeishu" width="300px" />
     <YeInput mode="wave-group" type="error" name="吴海平" width="500px" />
+
+    <YeLoader mode="spin" type="primary" name="吴海平" width="500px" />
   </div>
 </template>

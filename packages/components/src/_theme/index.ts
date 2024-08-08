@@ -64,14 +64,14 @@ export function presetYeTheme(options: PresetYeOptions = {}): Preset<Theme> {
   const {
     prefix = '--un-preset-ye',
     selectors,
-    lightBackgroundColor = '#ffffff',
-    darkBackgroundColor = '#141414',
-    primary = '#1677ff',
-    secondary = '#008080',
-    accent = '#FFC0CB',
-    success = '#52c41a',
-    warning = '#faad14',
-    error = '#ff4d4f',
+    lightBackgroundColor = '#f1f2f6',
+    darkBackgroundColor = '#2f3542',
+    primary = '#3742fa',
+    secondary = '#5352ed',
+    accent = '#ff7f50',
+    success = '#2ed573',
+    warning = '#ffa502',
+    error = '#ff4757',
     info = '#1677ff',
   } = options
 

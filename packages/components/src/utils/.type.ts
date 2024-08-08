@@ -17,6 +17,8 @@ export type ButtonMode =
 
 export type InputMode = 'basic' | 'search' | 'wave-group'
 
+export type LoaderMode = 'basic' | 'spin'
+
 export type themeType = 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
 
 export type sizeType = 'xs' | 'sm' | 'md' | 'lg'
