@@ -50,6 +50,7 @@ export default defineConfig({
     ...types.map((t) => levels.map((l) => `border-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `text-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `border-t-${t}-${l}`)).flat(),
+    ...types.map((t) => levels.map((l) => `border-b-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `focus:ring-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `focus:border-${t}-${l}`)).flat(),
     ...types.map((t) => `border-r-${t}-5`),

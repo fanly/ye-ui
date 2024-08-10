@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const cSize = computed(() => `c-${props.size}`)
-const loaderTheme = computed(() => `text-${props.type}-5 border-${props.type}-2 border-t-${props.type}-7`)
+const loaderTheme = computed(() => `border-solid text-${props.type}-5 border-${props.type}-2 border-t-${props.type}-7 border-b-2`)
 </script>
 
 <template>

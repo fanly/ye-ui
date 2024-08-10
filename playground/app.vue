@@ -103,5 +103,6 @@ import { YeButton, YeInput, YeLoader } from '@ye-ui/components'
     <YeInput mode="wave-group" type="error" name="吴海平" width="500px" />
 
     <YeLoader mode="spin" type="primary" name="吴海平" width="500px" />
+    <YeLoader mode="more-circle" type="success" name="吴海平" width="500px" />
   </div>
 </template>
