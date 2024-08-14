@@ -25,6 +25,7 @@ export default antfu(
     },
     rules: {
       '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/ban-ts-comment': 'warn',
       '@typescript-eslint/consistent-type-definitions': 'off',
       'import/first': 'off',

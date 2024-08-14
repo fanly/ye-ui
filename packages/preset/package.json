@@ -1,6 +1,6 @@
 {
   "name": "@ye-ui/preset",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ye UI css rules for unocss preset.",
   "author": "fanly <https://github.com/fanly>",
   "license": "MIT",

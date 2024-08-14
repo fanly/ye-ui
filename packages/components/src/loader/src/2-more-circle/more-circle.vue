@@ -25,8 +25,8 @@ const loaderTheme3 = computed(() => `border-solid text-${props.type}-3 border-${
 <template>
   <div class="flex">
     <div class="animate-spin ease-linear" :class="[cSize, loaderTheme1]" />
-    <div class="animate-spin ease-linear ml-3" :class="[cSize, loaderTheme2]" />
-    <div class="animate-spin ease-linear ml-3" :class="[cSize, loaderTheme3]" />
+    <div class="ml-3 animate-spin ease-linear" :class="[cSize, loaderTheme2]" />
+    <div class="ml-3 animate-spin ease-linear" :class="[cSize, loaderTheme3]" />
   </div>
 </template>
 

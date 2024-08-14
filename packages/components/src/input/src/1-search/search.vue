@@ -23,7 +23,7 @@ const inputCSize = computed(() => `c-${props.size}`)
 <template>
   <div
     :class="[inputType, inputCSize]"
-    class="p-5 overflow-hidden hover:w-[270px] shadow-[2px_2px_20px_rgba(0,0,0,0.08)] flex group items-center hover:duration-300 duration-300"
+    class="group flex items-center overflow-hidden p-5 shadow-[2px_2px_20px_rgba(0,0,0,0.08)] duration-300 hover:w-[270px] hover:duration-300"
   >
     <div class="flex items-center justify-center fill-white">
       <slot>
@@ -43,7 +43,7 @@ const inputCSize = computed(() => `c-${props.size}`)
     </div>
     <input
       type="text"
-      class="border-none outline-none outline-0 outline-transparent text-[20px] bg-transparent w-full text-white font-normal px-4"
+      class="w-full border-none bg-transparent px-4 text-[20px] text-white font-normal outline-0 outline-transparent outline-none"
     >
   </div>
 </template>
