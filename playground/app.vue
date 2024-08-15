@@ -107,5 +107,9 @@ import { YeButton, YeInput, YeLoader } from '@ye-ui/components'
     <YeLoader mode="spin" type="success" name="吴海平" width="500px" />
 
     <YeLoader mode="more-circle" type="success" name="吴海平" width="500px" />
+
+    <YeLoader mode="spinner" type="success" size="10" />
+
+    <YeLoader mode="spinner" type="success" size="24" />
   </div>
 </template>

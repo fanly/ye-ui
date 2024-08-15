@@ -6,7 +6,8 @@ const types = ['primary', 'secondary', 'accent', 'success', 'info', 'warning', '
 // const levels = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
 const levels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 const sizes = ['xs', 'sm', 'md', 'base', 'lg']
-const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'sm', 'md', 'lg']
+const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'xs', 'sm', 'md', 'base', 'lg']
+const numbers = ['0', '0.5', '1', '1.5', '2', '2.5', '3', '3.5', '4', '5', '6', '7', '8', '9', '10', '11', '12', '14', '16', '20', '24', '28', '32', '36', '40', '44', '48', '52', '56', '60', '64', '72', '80', '96']
 
 export default defineConfig({
   presets: [
@@ -64,6 +65,7 @@ export default defineConfig({
     ...sizes.map((s) => `input-${s}`),
     ...sizes.map((s) => `btn-c-${s}`),
     ...sizes.map((s) => `c-${s}`),
+    ...numbers.map((s) => `size-${s}`),
     'btn',
     'bar',
     ...types.map((t) => `bar-${t}`),
@@ -108,5 +110,6 @@ export default defineConfig({
     [/^input-theme-(.*)$/, ([, c]) => `bg-${c}-4 text-${c}-3`],
     [/^input-b-(.*)$/, ([, c]) => `bg-transparent border-solid border-b border-b-${c}-3 text-${c}-3 focus:border-b-${c}-3`],
     [/^bar-(.*)$/, ([, c]) => `before:bg-${c}-7 after:bg-${c}-7`],
+    [/^size-(.*)$/, ([, c]) => `size-${c}`],
   ],
 })
