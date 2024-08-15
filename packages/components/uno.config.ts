@@ -66,6 +66,7 @@ export default defineConfig({
     ...sizes.map((s) => `btn-c-${s}`),
     ...sizes.map((s) => `c-${s}`),
     ...numbers.map((s) => `size-${s}`),
+    ...numbers.map((s) => `sizeC-${s}`),
     'btn',
     'bar',
     ...types.map((t) => `bar-${t}`),
@@ -111,5 +112,6 @@ export default defineConfig({
     [/^input-b-(.*)$/, ([, c]) => `bg-transparent border-solid border-b border-b-${c}-3 text-${c}-3 focus:border-b-${c}-3`],
     [/^bar-(.*)$/, ([, c]) => `before:bg-${c}-7 after:bg-${c}-7`],
     [/^size-(.*)$/, ([, c]) => `size-${c}`],
+    [/^sizeC-(.*)$/, ([, c]) => `size-${c} rounded-full`],
   ],
 })

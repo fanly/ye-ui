@@ -1,22 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { sizeType, themeType } from 'utils/.type.ts'
+import type { themeType } from 'utils/.type.ts'
 
 interface Props {
   type?: themeType
-  size?: sizeType
-  name?: string
-  width?: string
+  size?: number
 }
 
 const props = withDefaults(defineProps<Props>(), {
   type: 'info',
-  size: 'md',
-  name: 'name',
-  width: '200px',
+  size: 10,
 })
 
-const cSize = computed(() => `c-${props.size}`)
+const cSize = computed(() => `sizeC-${props.size}`)
 const loaderTheme = computed(() => `border-solid text-${props.type}-5 border-${props.type}-2 border-t-${props.type}-7 border-b-2`)
 </script>
 

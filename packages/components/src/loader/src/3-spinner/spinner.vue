@@ -10,11 +10,10 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   type: 'info',
   size: 8,
-  width: '200px',
 })
 
 const cSize = computed(() => `size-${props.size}`)
-const loaderTheme = computed(() => `border-solid border-${props.type}-5 bg-${props.type}-3`)
+const loaderTheme = computed(() => `border-solid border-2 border-${props.type}-5 bg-${props.type}-3`)
 </script>
 
 <template>
