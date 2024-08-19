@@ -67,6 +67,7 @@ export default defineConfig({
     ...sizes.map((s) => `c-${s}`),
     ...numbers.map((s) => `size-${s}`),
     ...numbers.map((s) => `sizeC-${s}`),
+    ...numbers.map((s) => `cb-size-${s}`),
     'btn',
     'bar',
     ...types.map((t) => `bar-${t}`),
@@ -113,5 +114,6 @@ export default defineConfig({
     [/^bar-(.*)$/, ([, c]) => `before:bg-${c}-7 after:bg-${c}-7`],
     [/^size-(.*)$/, ([, c]) => `size-${c}`],
     [/^sizeC-(.*)$/, ([, c]) => `size-${c} rounded-full`],
+    [/^cb-size-(.*)$/, ([, c]) => `w-${c * 2} h-${c} after:h-${c - 2} after:w-${c - 2} peer-checked:after:translate-x-${c}`],
   ],
 })

@@ -3,11 +3,12 @@ import type { App } from 'vue'
 import { YeButton } from '@/button'
 import { YeInput } from '@/input'
 import { YeLoader } from '@/loader'
+import { YeCheckbox } from '@/checkbox'
 
-const component = [YeButton, YeInput, YeLoader]
+const component = [YeButton, YeInput, YeLoader, YeCheckbox]
 
 // 按需引入
-export { YeButton, YeInput, YeLoader }
+export { YeButton, YeInput, YeLoader, YeCheckbox }
 
 const Components = {
   install(app: App) {

@@ -33,6 +33,7 @@ export default antfu(
       'symbol-description': 'off',
       'no-console': 'warn',
       'max-statements-per-line': ['error', { max: 2 }],
+      semi: ["error", "never"], // 语句末尾不加分号
       'vue/one-component-per-file': 'off',
       'vue/no-parsing-error': [
         'error',
