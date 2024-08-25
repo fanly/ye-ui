@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const cSize = computed(() => `cb-size-${props.size}`)
-const theme = computed(() => `bg-${props.type}-3 after:bg-white after:text-${props.type}-3 after:font-bold peer-focus:ring-${props.type}-5 peer-checked:after:border-white peer-focus:ring-4`)
+const theme = computed(() => `font-size-${props.size} bg-${props.type}-3 after:bg-white after:text-${props.type}-3 after:font-bold peer-focus:ring-${props.type}-5 peer-checked:after:border-white peer-focus:ring-4`)
 const pre = computed(() => {
   const textArray = props.text.split('-')
   return textArray[0] || 'No'

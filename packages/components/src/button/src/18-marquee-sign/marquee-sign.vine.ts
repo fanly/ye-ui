@@ -4,7 +4,7 @@ import type { sizeType, themeType } from 'utils/.type'
 export function YeMarqueeSignButton() {
   vineStyle.scoped(`@import 'marquee-sign'`)
   const type = vineProp.withDefault<themeType>('info')
-  const size = vineProp.withDefault<sizeType>('md')
+  const size = vineProp.withDefault<sizeType>('base')
   const text = vineProp.withDefault<string>('text')
   const nextText = vineProp.withDefault<string>('nextText')
 

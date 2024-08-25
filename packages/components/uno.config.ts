@@ -5,8 +5,8 @@ import presetYeTheme from './src/_theme'
 const types = ['primary', 'secondary', 'accent', 'success', 'info', 'warning', 'error']
 // const levels = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
 const levels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-const sizes = ['xs', 'sm', 'md', 'base', 'lg']
-const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'xs', 'sm', 'md', 'base', 'lg']
+const sizes = ['xs', 'sm', 'base', 'lg', '2xl']
+const fractions = ['1/2', '1/3', '1/4', '1/5', '1/6', 'full', '80', '96', '120', 'xs', 'sm', 'base', 'lg', '2xl']
 const numbers = ['0', '0.5', '1', '1.5', '2', '2.5', '3', '3.5', '4', '5', '6', '7', '8', '9', '10', '11', '12', '14', '16', '20', '24', '28', '32', '36', '40', '44', '48', '52', '56', '60', '64', '72', '80', '96']
 
 export default defineConfig({
@@ -48,6 +48,7 @@ export default defineConfig({
   safelist: [
     ...types.map((t) => levels.map((l) => `bg-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `hover:bg-${t}-${l}`)).flat(),
+    ...types.map((t) => levels.map((l) => `peer-checked:bg-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `border-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `text-${t}-${l}`)).flat(),
     ...types.map((t) => levels.map((l) => `border-t-${t}-${l}`)).flat(),
@@ -68,6 +69,7 @@ export default defineConfig({
     ...numbers.map((s) => `size-${s}`),
     ...numbers.map((s) => `sizeC-${s}`),
     ...numbers.map((s) => `cb-size-${s}`),
+    ...numbers.map((s) => `font-size-${s}`),
     'btn',
     'bar',
     ...types.map((t) => `bar-${t}`),
@@ -77,27 +79,26 @@ export default defineConfig({
   shortcuts: [
     {
       btn: 'border-0 box-border cursor-default *:border-0 *:box-border before:border-0 before:box-border after:border-0 after:box-border disabled:cursor-default',
+      'btn-2xl': 'h-24 min-h-24 px-24 text-2xl font-black',
       'btn-lg': 'h-16 min-h-16 px-16 text-lg font-black',
-      'btn-md': 'h-12 min-h-12 px-12 text-base font-medium',
       'btn-base': 'h-12 min-h-12 px-12 text-base font-medium',
       'btn-sm': 'h-8 min-h-8 px-8 text-sm font-light',
       'btn-xs': 'h-6 min-h-6 px-6 text-xs font-thin',
       'btn-c-lg': 'w-24 h-24 rounded-1/2 p-4 text-lg font-black',
-      'btn-c-md': 'w-20 h-20 rounded-1/2 p-2 text-base font-medium',
       'btn-c-base': 'w-20 h-20 rounded-1/2 p-2 text-base font-medium',
       'btn-c-sm': 'w-18 h-18 rounded-1/2 p-1 text-sm font-light',
       'btn-c-xs': 'w-14 h-14 rounded-1/2 p-0.5 text-xs font-thin',
     },
     {
+      'c-2xl': 'w-24 h-24 rounded-full',
       'c-lg': 'w-20 h-20 rounded-full',
-      'c-md': 'w-16 h-16 rounded-full',
       'c-base': 'w-16 h-16 rounded-full',
       'c-sm': 'w-12 h-12 rounded-full',
       'c-xs': 'w-10 h-10 rounded-full',
     },
     {
+      'input-2xl': 'block bg-transparent border-none border-0 p-8 text-lg font-black focus:outline-none',
       'input-lg': 'block bg-transparent border-none border-0 p-4 text-lg font-black focus:outline-none',
-      'input-md': 'block bg-transparent border-none border-0 p-2.5 text-base font-medium focus:outline-none',
       'input-base': 'block bg-transparent border-none border-0 p-2.5 text-base font-medium focus:outline-none',
       'input-sm': 'block bg-transparent border-none border-0 p-2 text-sm font-light focus:outline-none',
       'input-xs': 'block bg-transparent border-none border-0 p-1 text-xs font-thin focus:outline-none',
@@ -115,5 +116,8 @@ export default defineConfig({
     [/^size-(.*)$/, ([, c]) => `size-${c}`],
     [/^sizeC-(.*)$/, ([, c]) => `size-${c} rounded-full`],
     [/^cb-size-(.*)$/, ([, c]) => `w-${c * 2} h-${c} after:h-${c - 2} after:w-${c - 2} peer-checked:after:translate-x-${c}`],
+    [/^font-size-(.*)$/, ([, c]) => {
+      return c <= 12 ? `text-xs` : c <= 18 ? `text-sm` : c <= 24 ? `text-base` : c <= 30 ? `text-lg` : `text-2xl`
+    }],
   ],
 })

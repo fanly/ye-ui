@@ -4,7 +4,7 @@ import type { sizeType, themeType } from 'utils/.type'
 export function YeNeumorphism3Button() {
   vineStyle.scoped(`@import 'neumorphism-3.css'`)
   const type = vineProp.withDefault<themeType>('info')
-  const size = vineProp.withDefault<sizeType>('md')
+  const size = vineProp.withDefault<sizeType>('base')
   const buttonType = computed(() => `button-${props.type}`)
   const btn_size = computed(() => `btn-${size.value}`)
   return vine`

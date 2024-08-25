@@ -4,7 +4,7 @@ import type { sizeType, themeType } from 'utils/.type'
 export function YeTextSlideButton() {
   vineStyle.scoped(`@import 'text-slide.css'`)
   const type = vineProp.withDefault<themeType>('info')
-  const size = vineProp.withDefault<sizeType>('md')
+  const size = vineProp.withDefault<sizeType>('base')
   const btnClass = computed(() => [`button-${props.type}`, `btn-${size.value}`])
 
   return vine`

@@ -11,7 +11,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   type: 'info',
-  size: 'md',
+  size: 'base',
   name: 'name',
   width: '200px',
 })

@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import '@ye-ui/components/style.css'
-import { YeCheckbox, YeInput, YeLoader } from '@ye-ui/components'
+import { YeInput, YeLoader, YeSwitch } from '@ye-ui/components'
 </script>
 
 <template>
@@ -123,16 +123,19 @@ import { YeCheckbox, YeInput, YeLoader } from '@ye-ui/components'
     <YeLoader mode="spinner" type="error" size="24" />
 
     <div class="flex space-x-4">
-      <YeCheckbox mode="goose" type="primary" size="7" />
-      <YeCheckbox mode="goose" type="secondary" size="8" />
-      <YeCheckbox mode="goose" type="accent" size="9" />
-      <YeCheckbox mode="goose" type="success" size="10" />
-      <YeCheckbox mode="goose" type="info" size="11" />
-      <YeCheckbox mode="goose" type="warning" size="12" />
-      <YeCheckbox mode="goose" type="error" size="14" />
-      <YeCheckbox mode="goose" type="error" size="16" />
-      <YeCheckbox mode="goose" type="error" size="20" text="否-是" />
-      <YeCheckbox mode="goose" type="error" size="24" text="否" />
+      <YeSwitch mode="goose" type="primary" size="7" />
+      <YeSwitch mode="goose" type="secondary" size="8" />
+      <YeSwitch mode="goose" type="accent" size="9" />
+      <YeSwitch mode="goose" type="success" size="10" />
+      <YeSwitch mode="goose" type="info" size="11" />
+      <YeSwitch mode="goose" type="warning" size="12" />
+      <YeSwitch mode="goose" type="error" size="14" />
+      <YeSwitch mode="goose" type="error" size="16" />
+      <YeSwitch mode="goose" type="error" size="20" text="否-是" />
+      <YeSwitch mode="goose" type="error" size="24" text="否" />
+    </div>
+    <div class="flex space-x-4">
+      <YeSwitch mode="octopus" type="primary" size="7" />
     </div>
   </div>
 </template>

@@ -19,7 +19,7 @@ export type InputMode = 'basic' | 'search' | 'wave-group'
 
 export type LoaderMode = 'basic' | 'spin' | 'more-circle' | 'spinner'
 
-export type CheckboxMode = 'basic' | 'goose'
+export type SwitchMode = 'basic' | 'goose' | 'octopus'
 
 export type themeType = 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
 

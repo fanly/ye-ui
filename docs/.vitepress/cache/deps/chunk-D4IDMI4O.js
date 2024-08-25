@@ -11011,7 +11011,7 @@ function resolveDynamicModel(tagName, type) {
       return vModelText;
     default:
       switch (type) {
-        case "checkbox":
+        case "switch":
           return vModelCheckbox;
         case "radio":
           return vModelRadio;

@@ -4,7 +4,7 @@ import type { sizeType, themeType } from 'utils/.type'
 export function YeGlowButton() {
   vineStyle.scoped(`@import 'glow-button.css'`)
   const type = vineProp.withDefault<themeType>('info')
-  const size = vineProp.withDefault<sizeType>('md')
+  const size = vineProp.withDefault<sizeType>('base')
   const buttonType = computed(() => `button-${type.value}`)
   const btn_size = computed(() => `btn-${size.value}`)
   return vine`
