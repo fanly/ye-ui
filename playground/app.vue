@@ -138,7 +138,11 @@ import { YeCard, YeInput, YeLoader, YeSwitch } from '@ye-ui/components'
       <YeSwitch mode="octopus" type="primary" size="7" />
     </div>
     <div class="flex space-x-4">
-      <YeCard mode="turn-over" type="primary" size="7" />
+      <YeCard mode="turn-over" type="primary" size="7">
+        <template #front>
+          <p>Here might be a page title</p>
+        </template>
+      </YeCard>
     </div>
   </div>
 </template>

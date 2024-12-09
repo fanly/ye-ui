@@ -5,10 +5,14 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <p>Front Side</p>
+        <slot name="front">
+          <p>Front Side</p>
+        </slot>
       </div>
       <div class="card-back">
-        <p>Back Side</p>
+        <slot name="back">
+          <p>Back Side</p>
+        </slot>
       </div>
     </div>
   </div>
