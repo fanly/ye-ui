@@ -21,6 +21,8 @@ export type LoaderMode = 'basic' | 'spin' | 'more-circle' | 'spinner'
 
 export type SwitchMode = 'basic' | 'goose' | 'octopus'
 
+export type CardMode = 'turn-over' | 'goose' | 'octopus'
+
 export type themeType = 'success' | 'info' | 'warning' | 'error' | 'primary' | 'secondary' | 'accent'
 
 export type sizeType = 'xs' | 'sm' | 'md' | 'lg'

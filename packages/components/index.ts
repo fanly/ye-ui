@@ -4,11 +4,12 @@ import { YeButton } from '@/button'
 import { YeInput } from '@/input'
 import { YeLoader } from '@/loader'
 import { YeSwitch } from '@/switch'
+import { YeCard } from '@/card'
 
-const component = [YeButton, YeInput, YeLoader, YeSwitch]
+const component = [YeButton, YeInput, YeLoader, YeSwitch, YeCard]
 
 // 按需引入
-export { YeButton, YeInput, YeLoader, YeSwitch }
+export { YeButton, YeInput, YeLoader, YeSwitch, YeCard }
 
 const Components = {
   install(app: App) {

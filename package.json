@@ -19,13 +19,13 @@
     "ye-ui": "."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.24.1",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
+    "@antfu/eslint-config": "^2.27.3",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@types/bun": "latest",
-    "@vue-vine/eslint-parser": "^0.1.14",
-    "eslint": "^9.8.0",
-    "lint-staged": "^15.2.7",
+    "@vue-vine/eslint-parser": "^0.1.33",
+    "eslint": "^9.16.0",
+    "lint-staged": "^15.2.10",
     "simple-git-hooks": "^2.11.1"
   },
   "simple-git-hooks": {

@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import '@ye-ui/components/style.css'
-import { YeInput, YeLoader, YeSwitch } from '@ye-ui/components'
+import { YeCard, YeInput, YeLoader, YeSwitch } from '@ye-ui/components'
 </script>
 
 <template>
@@ -136,6 +136,9 @@ import { YeInput, YeLoader, YeSwitch } from '@ye-ui/components'
     </div>
     <div class="flex space-x-4">
       <YeSwitch mode="octopus" type="primary" size="7" />
+    </div>
+    <div class="flex space-x-4">
+      <YeCard mode="turn-over" type="primary" size="7" />
     </div>
   </div>
 </template>
