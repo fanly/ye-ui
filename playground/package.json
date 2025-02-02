@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@ye-ui/components": "link:@ye-ui/components",
+    "@ye-ui/components": "^0.0.3-alpha.12",
     "nuxt": "^3.12.4",
     "vue": "^3.4.33",
     "vue-router": "^4.4.0"

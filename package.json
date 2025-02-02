@@ -20,12 +20,14 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
-    "@commitlint/cli": "^19.6.0",
+    "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@types/bun": "latest",
     "@vue-vine/eslint-parser": "^0.1.33",
-    "eslint": "^9.16.0",
-    "lint-staged": "^15.2.10",
+    "eslint": "^9.19.0",
+    "lint-staged": "^15.4.3",
+    "oxlint": "^0.15.9",
+    "eslint-plugin-oxlint": "^0.15.9",
     "simple-git-hooks": "^2.11.1"
   },
   "simple-git-hooks": {
@@ -33,7 +35,7 @@
     "commit-msg": "bun commitlint --edit ${1}"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": "oxlint"
   },
   "commitlint": {
     "extends": [
